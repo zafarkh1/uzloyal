@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.myContainer {
+  @apply container mx-auto lg:py-6 py-2;
+}
+
+.heading2 {
+  @apply lg:text-4xl text-2xl font-medium;
+}
+
+.heading5 {
+  @apply lg:text-2xl text-base font-medium lg:leading-6 leading-4;
+}
+
+.text {
+  @apply lg:text-base text-sm;
+}
+
+.flexBetween {
+  @apply flex items-center justify-between;
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}

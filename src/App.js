@@ -1,9 +1,17 @@
-import useGetData from "./api/api.js";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home/Home";
+import About from "./pages/About";
 
 function App() {
-  const { services, news } = useGetData();
-  console.log(news);
-  return <></>;
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
