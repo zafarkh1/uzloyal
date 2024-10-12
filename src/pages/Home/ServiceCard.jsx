@@ -1,14 +1,36 @@
 import Slider from "react-slick";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import useGetData from "./../../api/api";
 
+export const PreviousArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute left-0 z-10 bg-white border border-gray-500 lg:p-2 rounded-full"
+    style={{ top: "50%", transform: "translateY(-50%)" }}
+  >
+    <IoIosArrowBack className="text-gray-500 icon" />
+  </button>
+);
+
+export const NextArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute right-0 z-10 bg-white border border-gray-500 lg:p-2 rounded-full"
+    style={{ top: "50%", transform: "translateY(-50%)" }}
+  >
+    <IoIosArrowForward className="text-gray-500 icon" />
+  </button>
+);
+
 var settings = {
-  //   dots: true,
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
+  prevArrow: <PreviousArrow />,
+  nextArrow: <NextArrow />,
   responsive: [
     {
       breakpoint: 1024,
@@ -27,12 +49,12 @@ var settings = {
 
 function ServiceCard(props) {
   const { services } = useGetData();
-  console.log(services);
+
   return (
     <div className="">
       <Slider {...settings}>
         {services.map((item) => (
-          <div key={item.id} className="px-3">
+          <div key={item.id} className="p-3">
             <div
               className="bg-cover bg-center h-64 flex items-center justify-center text-white rounded-md px-10"
               style={{
