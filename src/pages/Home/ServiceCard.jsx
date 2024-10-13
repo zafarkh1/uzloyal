@@ -27,6 +27,7 @@ var settings = {
 
 function ServiceCard(props) {
   const { services } = useGetData();
+  console.log(services, "salom Kamoliddin");
   console.log(services);
   return (
     <div className="">
