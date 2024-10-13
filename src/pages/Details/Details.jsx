@@ -14,7 +14,7 @@ const Details = () => {
     height: '500px', // Set a fixed height (adjust as necessary)
     objectFit: 'cover', // This will maintain the aspect ratio and cover the container
     borderRadius: '8px',
-    marginBottom: '20px'
+    marginBottom: '20px',
   };
 
   const paragraphStyles = {
@@ -24,33 +24,56 @@ const Details = () => {
     marginBottom: '20px',
     maxWidth: '90%',
     height: '500px', // Set height to match the image
-    overflowY: 'auto' // Allow scrolling if the text exceeds the height
+    overflowY: 'auto', // Allow scrolling if the text exceeds the height
   };
 
   return (
-    <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-      <div className="col-lg-8 col-md-12 order-lg-2 order-1" style={{ display: 'flex' }}>
+    <div
+      className=""
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+      }}
+    >
+      <div
+        className="col-lg-12 col-md-12 order-lg-2 order-1"
+        style={{ display: 'flex' }}
+      >
         {/* Sidebar */}
-        <div className="sidebar" style={{ width: '25%', padding: '20px' }}>
+        <div className="sidebar" style={{ width: '30%', padding: '20px' }}>
           <BlogSidebarCard />
         </div>
 
         {/* Main Content Area */}
-        <div className="details-content" style={{ width: '75%', padding: '20px' }}>
+        <div
+          className="details-content"
+          style={{
+            width: '70%', // Increased width to extend by 200px
+            padding: '20px',
+            maxWidth: '1400px', // Set a max width to prevent it from growing too large
+          }}
+        >
           {service ? (
             <div className="service-details">
-              <img 
-                src={service.imgSrc} 
+              <img
+                src={service.imgSrc}
                 alt={service.alt || 'Service Image'} // Ensure to provide a fallback for alt text
                 style={imageStyles} // Apply the image styles
               />
-              <h2 style={{ fontSize: '30px', fontWeight: 'bold', marginTop: '20px', marginBottom: '20px' }}>
+              <h2
+                style={{
+                  fontSize: '30px',
+                  fontWeight: 'bold',
+                  marginTop: '20px',
+                  marginBottom: '20px',
+                }}
+              >
                 {service.title}
               </h2>
               <div style={{ width: '100%' }}>
-                <p style={paragraphStyles}>
-                  {service.description}
-                </p>
+                <p style={paragraphStyles}>{service.description}</p>
               </div>
             </div>
           ) : (
