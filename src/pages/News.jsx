@@ -8,7 +8,7 @@ import Practicesingle from "../components/practicesingle/Practice-single";
 function News(props) {
   const { news } = useGetData();
   const { services } = useGetData();
-  console.log(news, "salom");
+
   return (
     <div className="w-full">
       <div
@@ -79,7 +79,7 @@ function News(props) {
                   <img
                     className="w-full h-[480px] border-[2px] border-red-400"
                     // src={val.news_images[0]["image.src"]}
-                    src={val.news_images[0].image_src}
+                    src={`https://test.uzloyal.uz/api/uploads/images/${val.news_images[0]["image.src"]}`}
                     alt={val.news_images[0]["news_id"]}
                   />
 
