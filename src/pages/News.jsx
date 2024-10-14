@@ -1,7 +1,7 @@
 import React from "react";
 import useGetData from "../api/api";
 import bgimg from "../assets/images/bg.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { HiChevronDoubleRight } from "react-icons/hi";
 import Practicesingle from "../components/practicesingle/Practice-single";
 
