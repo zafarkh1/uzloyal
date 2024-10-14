@@ -49,12 +49,7 @@ var settings = {
 
 function ServiceCard(props) {
   const { services } = useGetData();
-<<<<<<< HEAD
-  console.log(services, "salom Kamoliddin");
-  console.log(services);
-=======
 
->>>>>>> 3bdab1f6b5278d7ff558c7999118e445efaf506f
   return (
     <div className="">
       <Slider {...settings}>

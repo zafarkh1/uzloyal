@@ -10,6 +10,7 @@ module.exports = {
         sidebarColor: "#f5f5f5",
       },
     },
+
     container: {
       padding: {
         DEFAULT: "1rem",
