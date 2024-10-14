@@ -90,12 +90,13 @@ const NewPosts = () => {
                     <a href={post.link}>{post.title}</a>
                   </h3>
                   <Link 
-  className="read-more" 
-  to={post.link} 
-  style={{ fontSize: '18px', color: '#007bff', textDecoration: 'none' }} // Optional: textDecoration can be adjusted
+  className="read-more text-lg text-gray-400 no-underline hover:text-[#CCCC00]" 
+  to={post.link}
 >
   ЧИТАТЬ ДАЛЕЕ...
 </Link>
+
+
 
                 </div>
               </div>
