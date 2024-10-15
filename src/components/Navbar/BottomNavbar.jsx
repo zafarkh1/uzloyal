@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom"; // Import Link for navigation
+import ServiceLinks from "./ServiceLinks";
 import { useState } from "react";
-import { MdMenu, MdClose } from "react-icons/md";
+import { MdClose, MdMenu } from "react-icons/md";
 
 const botNavs = [
   { id: 5, title: "News", link: "/news" },
@@ -10,9 +12,10 @@ const botNavs = [
 
 function BottomNavbar({ navs }) {
   const [open, setOpen] = useState(false);
+  const [showServices, setShowServices] = useState(false); // State to manage Services visibility
 
   return (
-    <div className="bg-primary text-white lg:pl-36 pl-0">
+    <div className="bg-primary text-white lg:pl-36 pl-0 relative">
       <div className="myContainer">
         {/* Mobile menu toggle button */}
         <button className="lg:hidden text-2xl" onClick={() => setOpen(!open)}>
