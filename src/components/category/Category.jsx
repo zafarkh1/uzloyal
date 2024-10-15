@@ -5,20 +5,9 @@ import { DocsIcon } from "../../assets/icons";
 
 const Category = () => {
   const { id } = useParams();
-  const { services } = useGetData();
   const { sources } = useGetData();
-  const { news } = useGetData();
-  const { blogs } = useGetData();
-  const { faqs } = useGetData();
-
-  console.log(services, "services");
-  console.log(sources, "sources");
-  console.log(news, "news");
-  console.log(blogs, "blogs");
-  console.log(faqs, "faqs");
 
   const findDocuments = sources.filter((item) => item.category_id === +id);
-  console.log(findDocuments, "salom");
 
   return (
     <div className="max-w-[1320px] mx-auto py-10">

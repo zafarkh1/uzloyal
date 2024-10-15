@@ -6,6 +6,7 @@ import News from "./pages/News";
 import Practicesingle from "./components/practicesingle/Practice-single";
 import Documents from "./pages/Documents";
 import Category from "./components/category/Category";
+import Library from "./pages/Library";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/practice-single/:id" element={<Practicesingle />} />
         <Route path="/resources" element={<Documents />} />
         <Route path="/category/:id" element={<Category />} />
+        <Route path="/library" element={<Library />} />
       </Route>
     </Routes>
   );
