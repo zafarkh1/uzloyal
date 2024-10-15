@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import BlogSidebarCard from '../ServiceCards/BlogSideBarCard'; // Adjust the import path as necessary
+import BlogSidebarCard from '../Cards/BlogSideBarCard'; // Adjust the import path as necessary
 import { details } from './DetailDatas';
 
 const Details = () => {

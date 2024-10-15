@@ -6,6 +6,8 @@ import Services from "./pages/Services";
 import Details from "./pages/Details/Details";
 import NewPosts from "./pages/News/News";
 import NewsDetails from "./pages/News/NewsDetails";
+import Posts from "./pages/Posts/Posts";
+import PostsDetails from "./pages/Posts/PostsDetails";
 function App() {
   return (
     <Routes>
@@ -16,6 +18,8 @@ function App() {
         <Route path="/news" element={<NewPosts />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/newsdetails/:id" element={<NewsDetails />} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/postdetails/:id" element={<PostsDetails />} />
       </Route>
     </Routes>
   );

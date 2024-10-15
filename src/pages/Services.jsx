@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Use Link instead of anchor for client-side routing
-import { services } from './ServiceCards/ServiceDatas'; // Ensure this path is correct
+import { services } from './Cards/ServiceDatas'; // Ensure this path is correct
 
 const Services = () => {
   // Get the first 6 services

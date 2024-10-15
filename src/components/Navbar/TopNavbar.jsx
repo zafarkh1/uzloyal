@@ -38,7 +38,7 @@ const navs = [
   {
     id: 4,
     title: "Our publictioons",
-    link: "/blog",
+    link: "/posts",
   },
 ];
 
