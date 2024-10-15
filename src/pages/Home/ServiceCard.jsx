@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import useGetData from "./../../api/api";
+import useGetData from "../../api/api";
 
 export const PreviousArrow = ({ onClick }) => (
   <button

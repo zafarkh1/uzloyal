@@ -1,6 +1,6 @@
-import Article from "./Articl";
+import Stats from "../../components/Home/Stats";
+import Article from "./Article";
 import ServiceCard from "./ServiceCard";
-import Stats from "./Stats";
 
 function Home(props) {
   return (
