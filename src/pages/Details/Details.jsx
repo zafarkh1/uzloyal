@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import BlogSidebarCard from '../Cards/BlogSideBarCard'; // Adjust the import path as necessary
 import { details } from './DetailDatas';
-
+import PostSideBarCard from '../Cards/PostSideBarCard';
 const Details = () => {
   const { id } = useParams(); // Get the ID from the URL parameters
   // Find the specific service based on the ID from the URL
@@ -42,9 +42,14 @@ const Details = () => {
         style={{ display: 'flex' }}
       >
         {/* Sidebar */}
-        <div className="sidebar" style={{ width: '30%', padding: '20px' }}>
+        <div className="w-[30%] px-4 mr-14 flex flex-col"> {/* Changed to flex-col to match post layout */}
+        <div className="mb-20 flex-grow"> {/* Added flex-grow to take remaining space */}
           <BlogSidebarCard />
         </div>
+        <div className="mb-20 flex-grow"> {/* Added flex-grow to take remaining space */}
+          <PostSideBarCard />
+        </div>
+      </div>
 
         {/* Main Content Area */}
         <div
