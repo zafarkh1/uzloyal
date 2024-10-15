@@ -71,15 +71,14 @@ function News(props) {
             </div>
           </div>
 
-          {/*  */}
           <div className="w-[70%]">
             <div>
               {news?.slice(0, 5).map((val, index) => (
                 <div key={index} className="mb-10">
                   <img
                     className="w-full h-[480px] border-[2px] border-red-400"
-                    // src={val.news_images[0]["image.src"]}
-                    src={val.news_images[0].image_src}
+                    src={`https://test.uzloyal.uz/api/uploads/images/${val.news_images[0]["image.src"]}`}
+                    // src={val.news_images[0].image_src}
                     alt={val.news_images[0]["news_id"]}
                   />
 
