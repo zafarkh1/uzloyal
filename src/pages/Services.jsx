@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Use Link instead of anchor for client-side routing
-import { services } from './Cards/ServiceDatas'; // Ensure this path is correct
+import React from "react";
+import { Link } from "react-router-dom"; // Use Link instead of anchor for client-side routing
+import { services } from "../components/Sidebars/ServiceDatas";
 
 const Services = () => {
   // Get the first 6 services
@@ -13,17 +13,22 @@ const Services = () => {
           key={service.id}
           className="flex flex-col bg-white m-4"
           style={{
-            width: '400px',
-            height: '350px',
-            borderRadius: '12px',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
+            width: "400px",
+            height: "350px",
+            borderRadius: "12px",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)",
           }}
         >
           <div className="flex flex-col items-center p-4">
             <img
-              src={service.imgSrc || 'default-image-url.jpg'} // Add a fallback image URL
-              alt={service.alt || 'Service Image'} // Fallback alt text
-              style={{ height: '220px', width: '90%', objectFit: 'cover', marginTop: '10px' }}
+              src={service.imgSrc || "default-image-url.jpg"} // Add a fallback image URL
+              alt={service.alt || "Service Image"} // Fallback alt text
+              style={{
+                height: "220px",
+                width: "90%",
+                objectFit: "cover",
+                marginTop: "10px",
+              }}
             />
             <Link
               to={`/details/${service.id}`} // Dynamically pass the ID
