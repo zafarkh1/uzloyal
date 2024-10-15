@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import { details } from "./DetailDatas";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
+import useGetData from "../../api/api";
 
 const Details = () => {
-  const { id } = useParams(); // Get the ID from the URL parameters
-  // Find the specific service based on the ID from the URL
-  const service = details.find((s) => s.id === Number(id)); // Using Number(id)
+  const { id } = useParams();
+  const { services } = useGetData();
+
+  const service = services.find((s) => s.id === id); // Using Number(id)
 
   // Set fixed width and height for images and text
   const imageStyles = {
@@ -70,8 +72,8 @@ const Details = () => {
           {service ? (
             <div className="service-details">
               <img
-                src={service.imgSrc}
-                alt={service.alt || "Service Image"} // Ensure to provide a fallback for alt text
+                src={`https://test.uzloyal.uz/api/uploads/images/${service.image_src}`}
+                alt={service.title_en || "Service Image"} // Ensure to provide a fallback for alt text
                 style={imageStyles} // Apply the image styles
               />
               <h2
@@ -82,10 +84,10 @@ const Details = () => {
                   marginBottom: "20px",
                 }}
               >
-                {service.title}
+                {service.title_en}
               </h2>
               <div style={{ width: "100%" }}>
-                <p style={paragraphStyles}>{service.description}</p>
+                <p style={paragraphStyles}>{service.text_en}</p>
               </div>
             </div>
           ) : (
