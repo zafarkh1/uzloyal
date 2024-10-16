@@ -1,0 +1,26 @@
+.links::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1; /* Z-indexni pasaytirish kerak, shunda matn ustiga chiqmaydi */
+  transition: all 0.3s;
+  transition-timing-function: linear;
+  background-color: #cdb091; /* Tugma hover qilinganda rang */
+}
+
+.links:hover::before {
+  height: 100%;
+}
+
+.links {
+  position: relative;
+  overflow: hidden; /* Tugma ichidagi elementlar to'g'ri ko'rinishi uchun */
+  color: #cdb091; /* Matn rangi hover qilinganda oq bo'ladi */
+}
+
+.links:hover {
+  color: white;
+}
