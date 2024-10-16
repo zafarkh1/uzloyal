@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom"; // Use Link instead of anchor for client-side routing
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
+import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
+import useGetData from "../../api/api";
 
 const News = () => {
+  const news = useGetData();
+  console.log(news.news);
   const posts = [
     {
       id: 1,
@@ -46,72 +50,42 @@ const News = () => {
     },
   ];
 
-  // Style definitions for images
-  const imageStyles = {
-    width: "90%",
-    height: "500px",
-    objectFit: "cover",
-    borderRadius: "8px",
-    marginBottom: "20px",
-  };
-
   return (
-    <div className="flex justify-center min-h-screen mt-60">
-      {/* Container for Sidebar and Posts */}
-      <div className="flex w-full">
+    <div className="mt-52">
+      <BackgroundofPages heading={"Latest News"} text={"News"} />
+      <div className="myContainer flex lg:flex-row flex-col gap-10 min-h-screen mt-10">
         {/* Sidebar */}
-        <div className="w-[30%] px-4 mr-4 flex flex-col">
-          {" "}
-          {/* Adjusted margin-right */}
-          <div className="mb-20">
-            {" "}
-            {/* Spacing for BlogSidebarCard */}
-            <ServiceSidebar />
-          </div>
-          <div className="mb-20">
-            {" "}
-            {/* Spacing for PostSideBarCard */}
-            <PostSidebar />
-          </div>
+        <div className="lg:w-[30%]">
+          <ServiceSidebar />
+          <PostSidebar />
         </div>
 
         {/* Main Content Area */}
-        <div className="details-content w-[70%] p-4">
-          <div className="wpo-blog-content">
-            {posts.map((post) => (
-              <div className="post mb-10" key={post.id}>
-                <div className="entry-media video-holder text-center">
-                  <img
-                    src={post.imageUrl}
-                    alt={post.title}
-                    style={imageStyles} // Apply the image styles
-                  />
-                </div>
-                <div className="entry-meta mb-4">
-                  <ul>
-                    <li className="flex items-center text-gray-500">
-                      <i className="fi flaticon-user mr-2"></i> By{" "}
-                      <span>{post.author}</span>
-                    </li>
-                    <li className="flex items-center text-gray-500">
-                      <i className="fi flaticon-calendar mr-2"></i> {post.date}
-                    </li>
-                  </ul>
-                </div>
-                <div className="entry-details">
-                  <h3 className="text-2xl font-bold mb-4">
-                    <Link to={`/newsdetails/${post.id}`}>{post.title}</Link>
-                  </h3>
-                  <Link
-                    className="read-more text-lg text-gray-400 no-underline hover:text-[#CCCC00]"
-                    to={`/newsdetails/${post.id}`}
-                  >
-                    ЧИТАТЬ ДАЛЕЕ...
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="lg:w-[70%]">
+          {news.news.map((post) => (
+            <div className="lg:mb-14 mb-10" key={post.id}>
+              <img
+                src={`https://test.uzloyal.uz/api/uploads/images/${post.news_images[0]["image.src"]}`}
+                alt={post.title_en}
+                className="w-full rounded-lg mb-6 object-cover"
+              />
+              <ul className="flex gap-4">
+                <li>
+                  By <span className="text-secondary">{post.author}</span>
+                </li>
+                <li>{post.created_at.slice(0, 10)}</li>
+              </ul>
+              <h3 className="text-2xl font-bold my-4">
+                <Link to={`/newsdetails/${post.id}`}>{post.title_en}</Link>
+              </h3>
+              <Link
+                className="read-more text-lg text-gray-400 no-underline hover:bg-secondary"
+                to={`/newsdetails/${post.id}`}
+              >
+                ЧИТАТЬ ДАЛЕЕ...
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </div>

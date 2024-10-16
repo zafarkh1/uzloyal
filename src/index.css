@@ -7,7 +7,7 @@
 }
 
 .myContainer .stats-full-width {
-  width: 100vw; /* Full viewport width */
+  width: 99vw; /* Full viewport width */
   margin-left: calc(-50vw + 50%); /* Center the full width element */
 }
 

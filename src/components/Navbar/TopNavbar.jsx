@@ -1,4 +1,5 @@
 import { FaTelegram, FaFacebook, FaInstagram } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const icons = [
@@ -20,6 +21,8 @@ const icons = [
 ];
 
 function TopNavbar({ navs }) {
+  const navigate = useNavigate();
+
   return (
     <div className="myContainer flex items-center gap-10 bg-white">
       {/*    Logo     */}
@@ -35,7 +38,12 @@ function TopNavbar({ navs }) {
           {/*       Icons     */}
           <div className="hidden lg:flex items-center gap-4 text-primary">
             {icons.map((item) => (
-              <a key={item.id} href={item.link}>
+              <a
+                key={item.id}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {item.icon}
               </a>
             ))}
@@ -60,7 +68,10 @@ function TopNavbar({ navs }) {
         </div>
 
         <div className="mt-4 hidden lg:flex items-center gap-10">
-          <button className="bg-primary hover:bg-primary-hover text-white px-4 py-1 rounded-lg cursor-pointer">
+          <button
+            className="bg-primary hover:bg-primary-hover text-white px-4 py-1 rounded-lg cursor-pointer"
+            onClick={() => navigate("/contact")}
+          >
             Get consultation
           </button>
 

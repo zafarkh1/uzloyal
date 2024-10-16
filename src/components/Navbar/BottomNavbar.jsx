@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"; // Import Link for navigation
-import ServiceLinks from "./ServiceLinks";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 
@@ -12,11 +10,10 @@ const botNavs = [
 
 function BottomNavbar({ navs }) {
   const [open, setOpen] = useState(false);
-  const [showServices, setShowServices] = useState(false); // State to manage Services visibility
 
   return (
-    <div className="bg-primary text-white lg:pl-36 pl-0 relative">
-      <div className="myContainer">
+    <div className="bg-primary text-white pl-0 relative">
+      <div className="myContainer lg:w-4/5">
         {/* Mobile menu toggle button */}
         <button className="lg:hidden text-2xl" onClick={() => setOpen(!open)}>
           <MdMenu />
@@ -29,7 +26,7 @@ function BottomNavbar({ navs }) {
           } transition-transform duration-300 lg:translate-x-0 lg:static lg:w-full lg:h-auto lg:flex z-40`}
         >
           <ul
-            className={`flex lg:flex-row flex-col lg:justify-between lg:items-center lg:w-full w-64 space-y-4 lg:space-y-0 mt-24 lg:mt-0 lg:pl-0 pl-10`}
+            className={`flex lg:flex-row flex-col lg:gap-10 lg:w-full w-64 space-y-4 lg:space-y-0 mt-24 lg:mt-0 lg:pl-0 pl-10`}
           >
             {/* Mobile-only nav items */}
             {navs.map((item) => (

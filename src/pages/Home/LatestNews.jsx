@@ -3,7 +3,6 @@ import useGetData from "../../api/api";
 
 function LatestNews(props) {
   const news = useGetData();
-  console.log(news.news);
   return (
     <>
       <div className="border-l-2 border-[#cdb091] pl-8">

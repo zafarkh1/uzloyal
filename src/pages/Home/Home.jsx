@@ -6,7 +6,7 @@ import ServiceCard from "./ServiceCard";
 
 function Home(props) {
   return (
-    <div className="myContainer min-h-64 mt-56">
+    <div className="myContainer min-h-64 lg:mt-56 mt-36">
       <ServiceCard />
       <div className="stats-full-width">
         <Stats />
