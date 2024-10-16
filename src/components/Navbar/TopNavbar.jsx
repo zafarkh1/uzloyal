@@ -1,4 +1,5 @@
 import { FaTelegram, FaFacebook, FaInstagram } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const icons = [
@@ -19,52 +20,44 @@ const icons = [
   },
 ];
 
-const navs = [
-  {
-    id: 1,
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "About us",
-    link: "/about",
-  },
-  {
-    id: 3,
-    title: "Contact",
-    link: "/contact",
-  },
-  {
-    id: 4,
-    title: "Our publictioons",
-    link: "/blog",
-  },
-];
+function TopNavbar({ navs }) {
+  const navigate = useNavigate();
 
-function TopNavbar(props) {
   return (
-    <div className="myContainer flex gap-10">
+    <div className="myContainer flex items-center gap-10 bg-white">
+      {/*    Logo     */}
       <div>
         <a href="/">
           <img src="/assets/logo.png" alt="logo" className="w-24" />
         </a>
       </div>
+
+      {/*     Navigation     */}
       <div className="w-full">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4 text-primary">
+          {/*       Icons     */}
+          <div className="hidden lg:flex items-center gap-4 text-primary">
             {icons.map((item) => (
-              <a key={item.id} href={item.link}>
+              <a
+                key={item.id}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {item.icon}
               </a>
             ))}
             <a href="tel:+998901234567">+998901234567</a>
           </div>
-          <div>
+
+          {/*       Time     */}
+          <div className="hidden lg:block">
             <p className="text-primary text-sm">
               Mon-Fri from 09:00 to 18:00 Tashkent
             </p>
           </div>
+
+          {/*       Languages     */}
           <div className="flex gap-2">
             <span className="fi fi-uz"></span>
             <span className="fi fi-gb"></span>
@@ -73,10 +66,16 @@ function TopNavbar(props) {
             <span className="fi fi-tr"></span>
           </div>
         </div>
-        <div className="mt-4 flex items-center gap-10">
-          <button className="bg-primary hover:bg-primary-hover text-white px-4 py-1 rounded-lg cursor-pointer">
+
+        <div className="mt-4 hidden lg:flex items-center gap-10">
+          <button
+            className="bg-primary hover:bg-primary-hover text-white px-4 py-1 rounded-lg cursor-pointer"
+            onClick={() => navigate("/contact")}
+          >
             Get consultation
           </button>
+
+          {/*       Nav Links */}
           <ul className="flex items-center justify-between w-1/2">
             {navs.map((item) => (
               <li key={item.id}>

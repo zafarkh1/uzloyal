@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import useGetData from "./../../api/api";
+import useGetData from "../../api/api";
+import { useNavigate } from "react-router-dom";
 
 export const PreviousArrow = ({ onClick }) => (
   <button
@@ -49,19 +50,24 @@ var settings = {
 
 function ServiceCard(props) {
   const { services } = useGetData();
+  const navigate = useNavigate();
 
   return (
-    <div className="">
+    <div>
       <Slider {...settings}>
-        {services.map((item) => (
-          <div key={item.id} className="p-3">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className="p-3 cursor-pointer"
+            onClick={() => navigate(`/servicedetails/${service.id}`)}
+          >
             <div
               className="bg-cover bg-center h-64 flex items-center justify-center text-white rounded-md px-10"
               style={{
-                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://test.uzloyal.uz/api/uploads/images/${item.image_src}')`,
+                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://test.uzloyal.uz/api/uploads/images/${service.image_src}')`,
               }}
             >
-              <h5 className="heading5">{item.title_en}</h5>
+              <h5 className="lg:text-2xl">{service.title_en}</h5>
             </div>
           </div>
         ))}

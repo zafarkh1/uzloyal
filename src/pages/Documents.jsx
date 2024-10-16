@@ -1,7 +1,7 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
-import icons from "../assets/images/icons.png";
 import { Link } from "react-router-dom";
+import { BackgroundofPages } from "../components/utils/backgoundOfPages";
 
 function Documents(props) {
   const arizalar = [
@@ -45,59 +45,74 @@ function Documents(props) {
     },
   ];
   return (
-    <div className="bg-[#cccaca5d]">
-      <div className="grid grid-cols-2 max-w-[1320px] mx-auto py-10 gap-10 justify-between">
-        <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
-          <img src={icons} alt="icons" className="w-[50px]" />
-          <div>
-            <h1 className="text-[22px] mb-3 text-[#253858]">Аризалар</h1>
-            {arizalar?.map((value, index) => (
-              <div key={index} className="flex gap-[6px] items-center">
-                <GoArrowRight className="text-[20px]" />
-                <Link
-                  to={`/category/${value.category_id}`}
-                  className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
-                >
-                  {value.category_name}
-                </Link>
-              </div>
-            ))}
+    <div className="mt-52">
+      <BackgroundofPages heading={"Documents"} text={"Documents"} />
+      <div className="bg-[#cccaca5d]">
+        <div className="grid grid-cols-2 max-w-[1320px] mx-auto py-10 gap-10 justify-between">
+          <div className="flex items-center bg-white p-8 rounded-[8px] gap-20 mt-6">
+            <img
+              src="/assets/services/icons.png"
+              alt="icons"
+              className="w-[50px]"
+            />
+            <div>
+              <h1 className="text-[22px] mb-3 text-[#253858]">Аризалар</h1>
+              {arizalar?.map((value, index) => (
+                <div key={index} className="flex gap-[6px] items-center">
+                  <GoArrowRight className="text-[20px]" />
+                  <Link
+                    to={`/category/${value.category_id}`}
+                    className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
+                  >
+                    {value.category_name}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
-          <img src={icons} alt="icons" className="w-[50px]" />
-          <div>
-            <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
-            {shartnomalar?.map((value, index) => (
-              <div key={index} className="flex gap-[6px] items-center">
-                <GoArrowRight className="text-[20px]" />
-                <Link
-                  to={`/category/${value.category_id}`}
-                  className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
-                >
-                  {value.category_name}
-                </Link>
-              </div>
-            ))}
+          <div className="flex items-center bg-white p-8 rounded-[8px] gap-20 mt-6">
+            <img
+              src="/assets/services/icons.png"
+              alt="icons"
+              className="w-[50px]"
+            />
+            <div>
+              <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
+              {shartnomalar?.map((value, index) => (
+                <div key={index} className="flex gap-[6px] items-center">
+                  <GoArrowRight className="text-[20px]" />
+                  <Link
+                    to={`/category/${value.category_id}`}
+                    className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
+                  >
+                    {value.category_name}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
-          <img src={icons} alt="icons" className="w-[50px]" />
-          <div>
-            <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
-            {talabnoma?.map((value, index) => (
-              <div key={index} className="flex gap-[6px] items-center">
-                <GoArrowRight className="text-[20px]" />
-                <Link
-                  to={`/category/${value.category_id}`}
-                  className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
-                >
-                  {value.category_name}
-                </Link>
-              </div>
-            ))}
+          <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
+            <img
+              src="/assets/services/icons.png"
+              alt="icons"
+              className="w-[50px]"
+            />
+            <div>
+              <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
+              {talabnoma?.map((value, index) => (
+                <div key={index} className="flex gap-[6px] items-center">
+                  <GoArrowRight className="text-[20px]" />
+                  <Link
+                    to={`/category/${value.category_id}`}
+                    className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
+                  >
+                    {value.category_name}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
