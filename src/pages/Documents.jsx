@@ -1,6 +1,5 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
-import icons from "../assets/images/icons.png";
 import { Link } from "react-router-dom";
 
 function Documents(props) {
@@ -45,10 +44,14 @@ function Documents(props) {
     },
   ];
   return (
-    <div className="bg-[#cccaca5d]">
+    <div className="bg-[#cccaca5d] mt-52">
       <div className="grid grid-cols-2 max-w-[1320px] mx-auto py-10 gap-10 justify-between">
         <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
-          <img src={icons} alt="icons" className="w-[50px]" />
+          <img
+            src="/assets/services/icons.png"
+            alt="icons"
+            className="w-[50px]"
+          />
           <div>
             <h1 className="text-[22px] mb-3 text-[#253858]">Аризалар</h1>
             {arizalar?.map((value, index) => (
@@ -66,7 +69,11 @@ function Documents(props) {
         </div>
 
         <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
-          <img src={icons} alt="icons" className="w-[50px]" />
+          <img
+            src="/assets/services/icons.png"
+            alt="icons"
+            className="w-[50px]"
+          />
           <div>
             <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
             {shartnomalar?.map((value, index) => (
@@ -84,7 +91,11 @@ function Documents(props) {
         </div>
 
         <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
-          <img src={icons} alt="icons" className="w-[50px]" />
+          <img
+            src="/assets/services/icons.png"
+            alt="icons"
+            className="w-[50px]"
+          />
           <div>
             <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
             {talabnoma?.map((value, index) => (

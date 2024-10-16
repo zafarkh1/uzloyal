@@ -21,7 +21,7 @@ const icons = [
 
 function TopNavbar({ navs }) {
   return (
-    <div className="myContainer flex items-center gap-10">
+    <div className="myContainer flex items-center gap-10 bg-white">
       {/*    Logo     */}
       <div>
         <a href="/">

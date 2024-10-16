@@ -26,10 +26,10 @@ const navs = [
 
 function Navbar(props) {
   return (
-    <>
+    <div className="fixed top-0 left-0 right-0 z-50">
       <TopNavbar navs={navs} />
       <BottomNavbar navs={navs} />
-    </>
+    </div>
   );
 }
 

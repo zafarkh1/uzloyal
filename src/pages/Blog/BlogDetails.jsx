@@ -37,7 +37,7 @@ const BlogDetails = () => {
         className="bg-cover bg-no-repeat bg-center h-60 flex items-center"
         style={{
           backgroundImage:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/assets/blog-bg.jpg)",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/assets/page-bg.jpg)",
         }}
       >
         <div className="myContainer text-white">

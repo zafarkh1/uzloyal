@@ -1,6 +1,4 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import { details } from "./DetailDatas";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
 import useGetData from "../../api/api";

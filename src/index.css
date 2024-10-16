@@ -15,6 +15,10 @@
   @apply lg:text-4xl text-2xl font-medium;
 }
 
+.heading3 {
+  @apply lg:text-3xl text-xl font-medium;
+}
+
 .heading5 {
   @apply lg:text-2xl text-base font-medium lg:leading-6 leading-4;
 }

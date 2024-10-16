@@ -56,7 +56,7 @@ const News = () => {
   };
 
   return (
-    <div className="flex justify-center min-h-screen mt-20">
+    <div className="flex justify-center min-h-screen mt-60">
       {/* Container for Sidebar and Posts */}
       <div className="flex w-full">
         {/* Sidebar */}

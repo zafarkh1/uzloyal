@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom"; // Use Link instead of anchor for client-side routing
 import { services } from "../components/Sidebars/ServiceDatas";
 
@@ -7,17 +6,11 @@ const Services = () => {
   const firstSixServices = services.slice(0, 6);
 
   return (
-    <div className="sm:flex sm:justify-center flex-wrap">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-60">
       {firstSixServices.map((service) => (
         <div
           key={service.id}
-          className="flex flex-col bg-white m-4"
-          style={{
-            width: "400px",
-            height: "350px",
-            borderRadius: "12px",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)",
-          }}
+          className="flex flex-col bg-white rounded-lg shadow-2xl"
         >
           <div className="flex flex-col items-center p-4">
             <img
