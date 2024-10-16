@@ -7,6 +7,7 @@ import Practicesingle from "./components/practicesingle/Practice-single";
 import Documents from "./pages/Documents";
 import Category from "./components/category/Category";
 import Library from "./pages/Library";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/resources" element={<Documents />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/library" element={<Library />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
   );
