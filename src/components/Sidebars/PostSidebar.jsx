@@ -1,4 +1,3 @@
-import React from "react";
 import useGetData from "../../api/api";
 
 const PostSideBarCard = () => {
@@ -6,7 +5,6 @@ const PostSideBarCard = () => {
 
   return (
     <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-      {" "}
       {/* Blog sidebar container */}
       <h3 className="heading5 mb-6">Related Posts</h3> {/* Title */}
       <ul className="space-y-3">
@@ -18,7 +16,7 @@ const PostSideBarCard = () => {
             className="border-b border-gray-300 pb-4 flex flex-col transition duration-200" // Changed to flex-col
           >
             <a
-              href={`/postdetails/${post.id}`}
+              href={`/newsdetails/${post.id}`}
               className="text-blue-500 hover:underline"
             >
               <span className="mr-2">&gt;&gt;</span> {post.title_en}

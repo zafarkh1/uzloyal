@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Use Link instead of anchor for client-side routing
+import { useNavigate } from "react-router-dom";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
 import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
@@ -7,48 +6,7 @@ import useGetData from "../../api/api";
 
 const News = () => {
   const news = useGetData();
-  console.log(news.news);
-  const posts = [
-    {
-      id: 1,
-      author: "Sarvarjon Amriyev",
-      date: "2023-12-05",
-      imageUrl:
-        "https://test.uzloyal.uz/api/uploads/images/64e4d722-8425-4afd-8db1-e8220e16da1c.jpeg",
-      title: "Citizens allowed to cross Kyrgyz-Uzbek border with an ID card",
-    },
-    {
-      id: 2,
-      author: "Sherali Jo'rayev",
-      date: "2023-12-07",
-      imageUrl:
-        "https://test.uzloyal.uz/api/uploads/images/98026dbe-25f8-4d76-b52e-e258796477c4.jpeg",
-      title:
-        "Бу йил Ўзбекистонда қандай қиш кутилмоқда? – иқлимшунос билан интервю",
-    },
-    {
-      id: 3,
-      date: "2023-12-05",
-      imageUrl:
-        "https://test.uzloyal.uz/api/uploads/images/3b538972-d020-498f-8be7-61b4fd764557.jpeg",
-      title: "New tariffs to be introduced in Tashkent public transport",
-    },
-    {
-      id: 4,
-      date: "2023-12-06",
-      imageUrl:
-        "https://test.uzloyal.uz/api/uploads/images/15ac793c-ed2f-4ae2-adbd-f66089226b6d.jpeg",
-      title: "«Бахти Ташкентский» 15 суткага қамалди",
-    },
-    {
-      id: 5,
-      author: "Sarvarjon Amriyev",
-      date: "2023-12-05",
-      imageUrl:
-        "https://test.uzloyal.uz/api/uploads/images/84974d67-53db-4bdc-a668-b90fab3576b2.jpeg",
-      title: "Bakhtiyor Saidov and David Cameron",
-    },
-  ];
+  const navigate = useNavigate();
 
   return (
     <div className="mt-52">
@@ -71,19 +29,23 @@ const News = () => {
               />
               <ul className="flex gap-4">
                 <li>
-                  By <span className="text-secondary">{post.author}</span>
+                  By{" "}
+                  <span
+                    className="text-secondary cursor-pointer"
+                    onClick={() => navigate(`/newsdetails/${post.id}`)}
+                  >
+                    {post.author}
+                  </span>
                 </li>
                 <li>{post.created_at.slice(0, 10)}</li>
               </ul>
-              <h3 className="text-2xl font-bold my-4">
-                <Link to={`/newsdetails/${post.id}`}>{post.title_en}</Link>
-              </h3>
-              <Link
-                className="read-more text-lg text-gray-400 no-underline hover:bg-secondary"
-                to={`/newsdetails/${post.id}`}
+              <h3 className="text-2xl font-bold my-4">{post.title_en}</h3>
+              <h5
+                className="lg:text-lg hover:text-secondary transition-colors duration-200"
+                onClick={() => navigate(`/newsdetails/${post.id}`)}
               >
                 ЧИТАТЬ ДАЛЕЕ...
-              </Link>
+              </h5>
             </div>
           ))}
         </div>

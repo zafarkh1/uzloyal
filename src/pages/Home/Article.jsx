@@ -1,8 +1,9 @@
-import React from "react";
 import useGetData from "../../api/api";
+import { useNavigate } from "react-router-dom";
 
 function Article(props) {
   const { blogs } = useGetData();
+  const navigate = useNavigate();
 
   return (
     <div className="text-center my-16">
@@ -26,9 +27,15 @@ function Article(props) {
             </p>
             <div className="flex items-center">
               <p className="w-8 h-[2px] bg-primary"></p>
-              <a href="/" className="text-primary ml-4">
+              <p
+                className="text-primary ml-4 cursor-pointer"
+                onClick={() => {
+                  navigate(`/blogdetails/${item.id}`);
+                  window.scrollTo(0, 0);
+                }}
+              >
                 Read More
-              </a>
+              </p>
             </div>
           </div>
         ))}

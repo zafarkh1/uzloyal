@@ -1,4 +1,3 @@
-import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import useGetData from "../api/api";
 import { BackgroundofPages } from "../components/utils/backgoundOfPages";

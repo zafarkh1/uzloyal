@@ -2,22 +2,20 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import useGetData from "../../api/api";
+import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
 
 const BlogDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { blogs } = useGetData();
 
-  // Find the index of the current post by UUID
   const currentPostIndex = blogs.findIndex((post) => post.id === id);
   const currentPost = blogs[currentPostIndex];
 
-  // Determine the previous and next post using index
   const prevPost = currentPostIndex > 0 ? blogs[currentPostIndex - 1] : null;
   const nextPost =
     currentPostIndex < blogs.length - 1 ? blogs[currentPostIndex + 1] : null;
 
-  // Handlers for navigating to previous and next posts
   const handlePreviousClick = () => {
     if (prevPost) {
       navigate(`/blogdetails/${prevPost.id}`);
@@ -31,22 +29,9 @@ const BlogDetails = () => {
   };
 
   return (
-    <>
+    <div className="mt-52">
       {/*     Background image    */}
-      <div
-        className="bg-cover bg-no-repeat bg-center h-60 flex items-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/assets/page-bg.jpg)",
-        }}
-      >
-        <div className="myContainer text-white">
-          <h2 className="heading2 mb-8">Latest Articles</h2>
-          <h5 className="heading5">
-            Home - <span className="text-blue-400">Our publications</span>
-          </h5>
-        </div>
-      </div>
+      <BackgroundofPages heading="Latest" Articles text="Our publications" />
 
       <div className="myContainer flex lg:flex-row flex-col justify-between lg:gap-10 gap-4 w-full min-h-screen mt-8">
         {/* Main Content: 70% width on large screens */}
@@ -70,11 +55,9 @@ const BlogDetails = () => {
                 </ul>
               </div>
 
-              {/* Post Title */}
               <h2 className="mt-4 mb-6 heading2">{currentPost.title_en}</h2>
 
-              {/* Image */}
-              <div className="gallery mt-10 mb-10">
+              <div className="my-10">
                 <img
                   src={`https://test.uzloyal.uz/api/uploads/images/${currentPost.blog_images[0]["image.src"]}`}
                   alt={currentPost.title_en}
@@ -132,16 +115,12 @@ const BlogDetails = () => {
         </div>
 
         {/* Sidebar: 30% width on large screens */}
-        <div className="lg:w-[30%]">
-          <div className="mb-20">
-            <ServiceSidebar />
-          </div>
-          <div className="mb-20">
-            <PostSidebar />
-          </div>
+        <div className="lg:w-[30%] space-y-10">
+          <ServiceSidebar />
+          <PostSidebar />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

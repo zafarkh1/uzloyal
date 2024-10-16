@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useGetData from "../../api/api";
 import { DocsIcon } from "../../assets/icons";
