@@ -9,7 +9,7 @@ const Blogs = () => {
   const { blogs } = useGetData();
 
   return (
-    <div className="mt-52">
+    <div className="lg:mt-48 sm:mt-32 mt-24">
       {/*     Background image    */}
       <BackgroundofPages
         heading={"Latest Articles"}
@@ -17,18 +17,23 @@ const Blogs = () => {
       />
 
       {/*                 Blog Page Content    */}
-      <div className="myContainer flex lg:flex-row flex-col justify-between lg:gap-10 gap-4 w-full min-h-screen mt-12">
+      <div className="myContainer flex lg:flex-row flex-col justify-between lg:gap-10 gap-4 w-full min-h-screen lg:mt-10 mt-4 mb-8">
         {/*     Main Content Area: 70% width */}
         <div className="lg:w-[70%]">
           {blogs.map((post) => (
-            <div className="lg:mb-14 mb-10" key={post.id}>
+            <div className="lg:mb-14 sm:mb-10 mb-4" key={post.id}>
               <img
                 src={`https://test.uzloyal.uz/api/uploads/images/${post.blog_images[0]["image.src"]}`}
                 alt={post.title_en}
-                className="w-full rounded-lg mb-6 object-cover"
+                className="w-full rounded-lg lg:mb-6 mb-3 object-cover"
               />
-              <ul className="flex text-sm text-gray-500">
-                <li onClick={() => navigate(`/blogdetails/${post.id}`)}>
+              <ul className="flex text text-gray-500">
+                <li
+                  onClick={() => {
+                    navigate(`/blogdetails/${post.id}`);
+                    window.scrollTo(0, 0);
+                  }}
+                >
                   By
                   <span className="text-blue-500 hover:underline ml-1 cursor-pointer">
                     {post.author}
@@ -36,13 +41,13 @@ const Blogs = () => {
                 </li>
                 <li className="ml-4">{post.created_at.slice(0, 10)}</li>
               </ul>
-              <h3 className="text-2xl font-bold my-4">{post.title_en}</h3>
+              <h3 className="heading5 lg:my-4 my-2">{post.title_en}</h3>
               <span
                 onClick={() => {
                   navigate(`/blogdetails/${post.id}`);
                   window.scrollTo(0, 0);
                 }}
-                className="text-lg text-gray-400 hover:text-secondary cursor-pointer"
+                className="text text-gray-400 hover:text-secondary cursor-pointer"
               >
                 Read more ...
               </span>

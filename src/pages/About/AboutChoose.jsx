@@ -1,33 +1,30 @@
-function AboutChoose(props) {
+import { useTranslation } from "react-i18next";
+
+function AboutChoose() {
+  const { t } = useTranslation();
+
   return (
-    <div className="mb-20">
+    <div className="lg:mb-20 mb-10">
       <div className="text-center">
-        <p className="heading5 text-[#cdb091]">About Us</p>
-        <h5 className="heading2 my-3">Why Choose Us?</h5>
-        <p className="w-24 h-[1px] mx-auto bg-[#cdb091]"></p>
+        <p className="heading5 text-[#cdb091]">{t("about.heading")}</p>
+        <h5 className="heading2 lg:my-3 my-1">{t("about.subheading")}</h5>
+        <p className="w-24 h-[1px] mx-auto bg-[#cdb091] hidden lg:inline-block"></p>
       </div>
-      <div className="flex lg:flex-row flex-col items-center gap-16 my-10">
-        <div className="lg:w-1/2">
+      <div className="flex lg:flex-row flex-col items-center lg:gap-16 gap-4 lg:my-10 my-4">
+        <div className="lg:w-1/2 lg:-order-1 order-2">
           <h2 className="lg:text-4xl font-semibold lg:leading-normal">
-            We are the best legal firm that can provide you with comprehensive
-            assistance!
+            {t("about.title")}
           </h2>
-          <p className="lg:text-xl lg:leading-10 mt-10">
-            Law Firm 'LOYAL' provides professional legal services to businesses
-            (private entrepreneurs, companies and firms, LLCs, PJSCs,
-            organizations of all forms of ownership) throughout the Republic of
-            Uzbekistan. By contacting the LOYAL law office, you can count on
-            qualified prompt assistance in protecting your rights and complete
-            confidentiality of the information provided. You can always be sure
-            that your case is being handled by a professional who specializes in
-            providing legal services to businesses, has sufficient knowledge and
-            experience in this area, is equally well versed in economics and
-            law, and knows all the intricacies of organizing and running a
-            business.
+          <p className="lg:text-xl lg:leading-10 lg:mt-10 mt-4">
+            {t("about.description")}
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img src="/assets/about-1.jpg" alt="about" />
+          <img
+            src="/assets/about-1.jpg"
+            alt="about"
+            className="rounded-lg object-cover"
+          />
         </div>
       </div>
     </div>

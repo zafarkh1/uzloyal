@@ -19,12 +19,14 @@ const BlogDetails = () => {
   const handlePreviousClick = () => {
     if (prevPost) {
       navigate(`/blogdetails/${prevPost.id}`);
+      window.scrollTo(0, 0);
     }
   };
 
   const handleNextClick = () => {
     if (nextPost) {
       navigate(`/blogdetails/${nextPost.id}`);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -71,17 +73,12 @@ const BlogDetails = () => {
                   <div className="previous-post border border-gray-300 p-4 flex flex-col">
                     <button
                       onClick={handlePreviousClick}
-                      className="text-left text-lg text-gray-600 hover:text-[#c3af41] flex items-center"
+                      className="text-left text-lg text-gray-600 hover:text-[#c3af41] flex items-center mb-2"
                     >
                       <span className="mr-2">&#8592;</span>
                       <span className="font-medium">Previous</span>
                     </button>
-                    <Link
-                      to={`/blogdetails/${prevPost.id}`}
-                      className="text-lg mt-2 hover:underline"
-                    >
-                      {prevPost.title_en}
-                    </Link>
+                    <p>{prevPost.title_en}</p>
                   </div>
                 )}
 
@@ -89,17 +86,12 @@ const BlogDetails = () => {
                   <div className="next-post border border-gray-300 p-4 flex flex-col text-right">
                     <button
                       onClick={handleNextClick}
-                      className="text-right text-lg text-gray-600 hover:text-[#c3af41] flex items-center justify-end"
+                      className="text-right text-lg text-gray-600 hover:text-[#c3af41] flex items-center justify-end mb-2"
                     >
                       <span className="font-medium">Next</span>
                       <span className="ml-2">&#8594;</span>
                     </button>
-                    <Link
-                      to={`/blogdetails/${nextPost.id}`}
-                      className="text-lg mt-2 hover:underline"
-                    >
-                      {nextPost.title_en}
-                    </Link>
+                    <p>{nextPost.title_en}</p>
                   </div>
                 )}
               </div>
