@@ -20,7 +20,7 @@
 }
 
 .heading5 {
-  @apply lg:text-2xl text-base font-medium lg:leading-6 leading-4;
+  @apply lg:text-2xl text-base font-medium lg:leading-8 leading-6;
 }
 
 .text {

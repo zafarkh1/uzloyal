@@ -58,16 +58,21 @@ function ServiceCard(props) {
         {services.map((service) => (
           <div
             key={service.id}
-            className="p-3 cursor-pointer"
-            onClick={() => navigate(`/servicedetails/${service.id}`)}
+            className="lg:p-3 p-1 cursor-pointer"
+            onClick={() => {
+              navigate(`/servicedetails/${service.id}`);
+              window.scrollTo(0, 0);
+            }}
           >
             <div
-              className="bg-cover bg-center h-64 flex items-center justify-center text-white rounded-md px-10"
+              className="bg-cover bg-center lg:h-64 sm:h-48 h-40 object-cover flex items-center justify-center text-white rounded-md lg:px-10 px-4 text-center"
               style={{
                 backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://test.uzloyal.uz/api/uploads/images/${service.image_src}')`,
               }}
             >
-              <h5 className="lg:text-2xl">{service.title_en}</h5>
+              <h5 className="lg:text-2xl sm:text-base text-sm">
+                {service.title_en}
+              </h5>
             </div>
           </div>
         ))}

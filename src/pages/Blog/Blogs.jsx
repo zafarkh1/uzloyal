@@ -28,7 +28,12 @@ const Blogs = () => {
                 className="w-full rounded-lg mb-6 object-cover"
               />
               <ul className="flex text-sm text-gray-500">
-                <li onClick={() => navigate(`/blogdetails/${post.id}`)}>
+                <li
+                  onClick={() => {
+                    navigate(`/blogdetails/${post.id}`);
+                    window.scrollTo(0, 0);
+                  }}
+                >
                   By
                   <span className="text-blue-500 hover:underline ml-1 cursor-pointer">
                     {post.author}

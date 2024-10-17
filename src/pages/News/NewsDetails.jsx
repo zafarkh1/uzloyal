@@ -19,12 +19,14 @@ const NewsDetails = () => {
   const handlePreviousClick = () => {
     if (prevPost) {
       navigate(`/newsdetails/${prevPost.id}`);
+      window.scrollTo(0, 0);
     }
   };
 
   const handleNextClick = () => {
     if (nextPost) {
       navigate(`/newsdetails/${nextPost.id}`);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -76,12 +78,7 @@ const NewsDetails = () => {
                       <span className="mr-2">&#8592;</span>
                       <span className="font-medium">Previous</span>
                     </button>
-                    <Link
-                      to={`/newsdetails/${prevPost.id}`}
-                      className="text-lg mt-2 hover:underline"
-                    >
-                      {prevPost.title_en}
-                    </Link>
+                    <p>{prevPost.title_en}</p>
                   </div>
                 )}
 
@@ -94,12 +91,7 @@ const NewsDetails = () => {
                       <span className="font-medium">Next</span>
                       <span className="ml-2">&#8594;</span>
                     </button>
-                    <Link
-                      to={`/newsdetails/${nextPost.id}`}
-                      className="text-lg mt-2 hover:underline"
-                    >
-                      {nextPost.title_en}
-                    </Link>
+                    <p>{nextPost.title_en}</p>
                   </div>
                 )}
               </div>

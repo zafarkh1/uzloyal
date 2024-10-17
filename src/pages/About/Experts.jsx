@@ -47,25 +47,25 @@ const icons = [
 
 function Experts(props) {
   return (
-    <div className="my-10">
-      <div className="text-center my-10">
+    <div className="lg:my-10 my-4">
+      <div className="text-center lg:my-10 my-6">
         <p className="heading5 text-[#cdb091]">Qualified Attorneys</p>
-        <h5 className="heading2 my-3">Meet Our Experts</h5>
-        <p className="w-24 h-[1px] mx-auto bg-[#cdb091]"></p>
+        <h5 className="heading2 lg:my-3 my-1">Meet Our Experts</h5>
+        <p className="w-24 h-[1px] mx-auto bg-[#cdb091] hidden md:inline-block"></p>
       </div>
-      <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4 text-white">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-4 text-white">
         {data.map((item) => (
           <div
             key={item.id}
-            className="bg-cover bg-no-repeat lg:h-96 mt-auto flex flex-col justify-end items-center gap-2 group rounded-lg"
+            className="bg-cover bg-no-repeat xl:h-96 md:h-72 h-40 md:mt-auto md:pb-0 pb-4 flex flex-col justify-end items-center gap-2 group rounded-lg"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url(${item.img})`,
             }}
           >
-            <div className="group-hover:-translate-y-28 transition-all duration-500 text-center space-y-3">
+            <div className="lg:group-hover:-translate-y-28 md:group-hover:-translate-y-16 transition-all duration-500 text-center lg:space-y-3 space-y-1">
               <h5 className="heading3">{item.name}</h5>
-              <p className="text-[#cdb091]">{item.service}</p>
-              <div className="flex items-center justify-center gap-3 translate-y-5 group-hover:translate-y-0 mt-4 transition-all duration-500">
+              <p className="text-[#cdb091] text">{item.service}</p>
+              <div className="flex items-center justify-center gap-3 md:translate-y-5 md:group-hover:translate-y-0 md:mt-4 transition-all duration-500">
                 {icons.map((icon) => (
                   <a
                     key={icon.id}

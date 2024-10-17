@@ -65,10 +65,10 @@ function Contact() {
   };
 
   return (
-    <div className="mt-52">
+    <div className="lg:mt-48 sm:mt-32 mt-24">
       <BackgroundofPages heading={"Contact Us"} text={"Contact"} />
-      <div className="max-w-[1320px] mx-auto">
-        <div className="flex w-[80%] justify-between mx-auto my-10">
+      <div className="myContainer">
+        <div className="flex justify-between my-10">
           <div className="text-center w-[30%] p-10 shadow-[0_5px_15px_0_#3e419f1a]">
             <div className="w-[85px] h-[85px] rounded-[50%] mx-auto flex items-center justify-center bg-[#f5f5f5]">
               <MdLocationOn className="w-[35px] h-[35px] text-[#525252]" />

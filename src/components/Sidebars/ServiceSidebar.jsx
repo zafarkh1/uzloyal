@@ -16,7 +16,10 @@ const ServiceSidebar = () => {
             <li
               key={service.id}
               className="hover:bg-[#cdb091] hover:text-white cursor-pointer bg-white p-4 rounded-lg"
-              onClick={() => navigate(`/servicedetails/${service.id}`)}
+              onClick={() => {
+                navigate(`/servicedetails/${service.id}`);
+                window.scrollTo(0, 0);
+              }}
             >
               <span className="mr-2">&gt;&gt;</span>
               {service.title_en}

@@ -6,7 +6,7 @@ function Cards(props) {
   const navigate = useNavigate();
 
   return (
-    <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-10">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
       {services.slice(0, 6).map((service) => (
         <div
           key={service.id}
@@ -25,7 +25,10 @@ function Cards(props) {
             />
             <h5
               className="heading5 hover:text-secondary cursor-pointer text-center pt-4"
-              onClick={() => navigate(`/servicedetails/${service.id}`)}
+              onClick={() => {
+                navigate(`/servicedetails/${service.id}`);
+                window.scrollTo(0, 0);
+              }}
             >
               {service.title_en}
             </h5>

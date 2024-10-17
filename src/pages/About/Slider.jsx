@@ -41,7 +41,10 @@ function AboutSlider(props) {
       <div className="lg:w-1/2 bg-[#172533] text-white">
         <Slider {...settings}>
           {data.map((item) => (
-            <div key={item.id} className="p-14 text-center space-y-4">
+            <div
+              key={item.id}
+              className="lg:p-14 p-10 text-center lg:space-y-4 space-y-2"
+            >
               <p className="lg:text-xl lg:leading-10">{item.text}</p>
               <div className="flex items-center justify-center">
                 <img
@@ -57,7 +60,11 @@ function AboutSlider(props) {
         </Slider>
       </div>
       <div className="lg:w-1/2">
-        <img src="/assets/services/service1.jpeg" alt="about" />
+        <img
+          src="/assets/services/service1.jpeg"
+          alt="about"
+          className="h-full object-cover w-full"
+        />
       </div>
     </div>
   );
