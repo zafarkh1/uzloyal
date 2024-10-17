@@ -19,6 +19,7 @@ function Library() {
                   className="w-[50px]"
                 />
               </div>
+
               <div>
                 <h1 className="heading3 mb-3 text-[#253858] sm:text-left text-center">
                   Қонунлар
@@ -36,6 +37,8 @@ function Library() {
                   </div>
                 ))}
               </div>
+
+              
             </div>
 
             <div className="flex md:flex-row flex-col items-start md:justify-start justify-center bg-white lg:p-8 p-4 rounded-lg md:gap-10 gap-4">

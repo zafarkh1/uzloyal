@@ -15,7 +15,7 @@ const News = () => {
     if (currentLanguage === "ru") return item?.title_ru;
     if (currentLanguage === "cn") return item?.title_zh;
     if (currentLanguage === "tr") return item?.title_tr;
-    return item?.author_en;
+    return item?.title_en;
   };
 
   return (

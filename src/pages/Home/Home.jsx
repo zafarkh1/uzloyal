@@ -1,6 +1,7 @@
 import Stats from "../../components/Home/Stats";
 import AboutChoose from "../About/AboutChoose";
 import Article from "./Article";
+import Consultation from "./Consultation";
 import LatestNews from "./LatestNews";
 import ServiceCard from "./ServiceCard";
 
@@ -14,6 +15,7 @@ function Home(props) {
       <Article />
       <AboutChoose />
       <LatestNews />
+      <Consultation />
     </div>
   );
 }

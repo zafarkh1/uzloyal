@@ -103,7 +103,7 @@ function Contact() {
           ))}
         </div>
 
-        <div className="xl:px-52 text-center">
+        <div className="xl:px-52 text-center h-[480px]">
           <h2 className="heading3">Have Any Question?</h2>
 
           <p className="text-[#525252] text md:mt-4 mt-2 md:mb-8 mb-4">
@@ -163,7 +163,7 @@ function Contact() {
               ></span>
             </div>
 
-            <Button />
+            <Button color={true}/>
           </form>
         </div>
       </div>
