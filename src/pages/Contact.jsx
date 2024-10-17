@@ -5,6 +5,26 @@ import { BiSolidMessageCheck } from "react-icons/bi";
 import Button from "../components/button/Button";
 import { BackgroundofPages } from "../components/utils/backgoundOfPages";
 
+const items = [
+  {
+    id: 1,
+    icon: <MdLocationOn className="text-3xl" />,
+    title: "Office Address",
+    text: "7th Street, Zanjirbogʻ neighborhood, Yakkasaroy district, Tashkent city.",
+  },
+  {
+    id: 2,
+    icon: <FaPhoneVolume className="text-3xl" />,
+    title: "Phone Number",
+    text: "+998 71 234 56 78",
+  },
+  {
+    id: 3,
+    icon: <BiSolidMessageCheck className="text-3xl" />,
+    title: "Email Address",
+    text: "W8I7I@example.com",
+  },
+];
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -68,45 +88,25 @@ function Contact() {
     <div className="lg:mt-48 sm:mt-32 mt-24">
       <BackgroundofPages heading={"Contact Us"} text={"Contact"} />
       <div className="myContainer">
-        <div className="flex justify-between my-10">
-          <div className="text-center w-[30%] p-10 shadow-[0_5px_15px_0_#3e419f1a]">
-            <div className="w-[85px] h-[85px] rounded-[50%] mx-auto flex items-center justify-center bg-[#f5f5f5]">
-              <MdLocationOn className="w-[35px] h-[35px] text-[#525252]" />
+        <div className="grid sm:grid-cols-3 gap-10 my-10">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              className="text-center lg:p-10 sm:p-6 p-4 shadow-[0_5px_15px_0_#3e419f1a]"
+            >
+              <div className="w-[85px] h-[85px] rounded-full mx-auto flexCenter bg-[#f5f5f5]">
+                {item.icon}
+              </div>
+              <h2 className="heading5 lg:my-5 my-3">{item.title}</h2>
+              <p className="text-[#525252] text">{item.text}</p>
             </div>
-            <h2 className="text-[30px] my-5 font-serif">Office Address</h2>
-            <p className="text-[#525252] text-[18px] leading-[29px]">
-              7th Street, Zanjirbogʻ neighborhood, Yakkasaroy district, Tashkent
-              city.
-            </p>
-          </div>
-
-          <div className="text-center w-[30%] p-10 shadow-[0_5px_15px_0_#3e419f1a]">
-            <div className="w-[85px] h-[85px] rounded-[50%] mx-auto flex items-center justify-center bg-[#f5f5f5]">
-              <BiSolidMessageCheck className="w-[30px] h-[30px] text-[#525252]" />
-            </div>
-            <h2 className="text-[30px] my-5 font-serif">Email</h2>
-            <p className="text-[#525252] text-[18px] leading-[29px]">
-              loyalxat@gmail.com
-            </p>
-          </div>
-
-          <div className="text-center w-[30%] p-10 shadow-[0_5px_15px_0_#3e419f1a]">
-            <div className="w-[85px] h-[85px] rounded-[50%] mx-auto flex items-center justify-center bg-[#f5f5f5]">
-              <FaPhoneVolume className="w-[28px] h-[28px] text-[#525252]" />
-            </div>
-            <h2 className="text-[30px] my-5 font-serif">Phone number</h2>
-            <p className="text-[#525252] text-[18px] leading-[29px]">
-              +998901319544
-            </p>
-          </div>
+          ))}
         </div>
 
-        <div className="w-[80%] mx-auto h-[520px]">
-          <h2 className="text-[30px] text-center mt-8 mb-2 font-serif">
-            Have Any Question?
-          </h2>
+        <div className="xl:px-52 text-center">
+          <h2 className="heading3">Have Any Question?</h2>
 
-          <p className="text-[#525252] text-center mb-8 text-[18px] leading-[29px]">
+          <p className="text-[#525252] text md:mt-4 mt-2 md:mb-8 mb-4">
             Contact us, we will help you!
           </p>
 
@@ -114,7 +114,7 @@ function Contact() {
             onSubmit={handleChange}
             className="p-10 shadow-[0_5px_15px_0_#3e419f1a] bg-white relative"
           >
-            <div className="grid grid-cols-2 gap-x-5 gap-y-8">
+            <div className="grid md:grid-cols-2 md:gap-x-5 md:gap-y-8 gap-5">
               <div>
                 <input
                   onChange={(e) => setName(e.target.value)}
@@ -155,7 +155,7 @@ function Contact() {
                 value={description}
                 rows="7"
                 placeholder="Describe Your Case in Detail"
-                className="w-full resize-none mt-8 px-5 py-2 rounded-[5px] border-[#ebebeb] border-[1px] border-solid"
+                className="w-full resize-none md:mt-8 mt-5 px-5 py-2 rounded-[5px] border-[#ebebeb] border-[1px] border-solid"
               ></textarea>
               <span
                 className="text-red-700 text-[14px]"

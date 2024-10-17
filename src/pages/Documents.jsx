@@ -44,74 +44,92 @@ function Documents(props) {
       category_id: 18,
     },
   ];
+
   return (
-    <div className="mt-52">
+    <div className="lg:mt-48 sm:mt-32 mt-24">
       <BackgroundofPages heading={"Documents"} text={"Documents"} />
       <div className="bg-[#cccaca5d]">
-        <div className="grid grid-cols-2 max-w-[1320px] mx-auto py-10 gap-10 justify-between">
-          <div className="flex items-center bg-white p-8 rounded-[8px] gap-20 mt-6">
-            <img
-              src="/assets/services/icons.png"
-              alt="icons"
-              className="w-[50px]"
-            />
-            <div>
-              <h1 className="text-[22px] mb-3 text-[#253858]">Аризалар</h1>
-              {arizalar?.map((value, index) => (
-                <div key={index} className="flex gap-[6px] items-center">
-                  <GoArrowRight className="text-[20px]" />
-                  <Link
-                    to={`/category/${value.category_id}`}
-                    className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
-                  >
-                    {value.category_name}
-                  </Link>
-                </div>
-              ))}
+        <div className="myContainer">
+          <div className="grid lg:grid-cols-2 lg:py-10 py-6 gap-10">
+            {/* Arizalar Section */}
+            <div className="flex md:flex-row flex-col items-start md:justify-start justify-center bg-white lg:p-8 p-4 rounded-lg md:gap-10 gap-4">
+              <div className="flex justify-center items-center sm:w-auto w-full">
+                <img
+                  src="/assets/services/icons.png"
+                  alt="icons"
+                  className="w-[50px]"
+                />
+              </div>
+              <div>
+                <h1 className="heading3 mb-3 text-[#253858] sm:text-left text-center">
+                  Аризалар
+                </h1>
+                {arizalar.map((value, index) => (
+                  <div key={index} className="flex gap-2 items-center">
+                    <GoArrowRight className="text-[20px]" />
+                    <Link
+                      to={`/category/${value.category_id}`}
+                      className="text text-[#0d6efd] duration-500 hover:text-[#2e5691]"
+                    >
+                      {value.category_name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="flex items-center bg-white p-8 rounded-[8px] gap-20 mt-6">
-            <img
-              src="/assets/services/icons.png"
-              alt="icons"
-              className="w-[50px]"
-            />
-            <div>
-              <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
-              {shartnomalar?.map((value, index) => (
-                <div key={index} className="flex gap-[6px] items-center">
-                  <GoArrowRight className="text-[20px]" />
-                  <Link
-                    to={`/category/${value.category_id}`}
-                    className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
-                  >
-                    {value.category_name}
-                  </Link>
-                </div>
-              ))}
+            {/* Shartnomalar Section */}
+            <div className="flex md:flex-row flex-col items-start md:justify-start justify-center bg-white lg:p-8 p-4 rounded-lg md:gap-10 gap-4">
+              <div className="flex justify-center items-center sm:w-auto w-full">
+                <img
+                  src="/assets/services/icons.png"
+                  alt="icons"
+                  className="w-[50px]"
+                />
+              </div>
+              <div>
+                <h1 className="heading3 mb-3 text-[#253858] sm:text-left text-center">
+                  Шартномалар
+                </h1>
+                {shartnomalar.map((value, index) => (
+                  <div key={index} className="flex gap-2 items-center">
+                    <GoArrowRight className="text-[20px]" />
+                    <Link
+                      to={`/category/${value.category_id}`}
+                      className="text text-[#0d6efd] duration-500 hover:text-[#2e5691]"
+                    >
+                      {value.category_name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="flex items-center bg-white p-8 rounded-[8px] gap-20">
-            <img
-              src="/assets/services/icons.png"
-              alt="icons"
-              className="w-[50px]"
-            />
-            <div>
-              <h1 className="text-[22px] mb-3 text-[#253858]">Шартномалар</h1>
-              {talabnoma?.map((value, index) => (
-                <div key={index} className="flex gap-[6px] items-center">
-                  <GoArrowRight className="text-[20px]" />
-                  <Link
-                    to={`/category/${value.category_id}`}
-                    className="text-[18px] text-[#0d6efd] ease-in duration-500 hover:text-[#2e5691]"
-                  >
-                    {value.category_name}
-                  </Link>
-                </div>
-              ))}
+            {/* Talabnoma Section */}
+            <div className="flex md:flex-row flex-col items-start md:justify-start justify-center bg-white lg:p-8 p-4 rounded-lg md:gap-10 gap-4">
+              <div className="flex justify-center items-center sm:w-auto w-full">
+                <img
+                  src="/assets/services/icons.png"
+                  alt="icons"
+                  className="w-[50px]"
+                />
+              </div>
+              <div>
+                <h1 className="heading3 mb-3 text-[#253858] sm:text-left text-center">
+                  Шартномалар
+                </h1>
+                {talabnoma.map((value, index) => (
+                  <div key={index} className="flex gap-2 items-center">
+                    <GoArrowRight className="text-[20px]" />
+                    <Link
+                      to={`/category/${value.category_id}`}
+                      className="text text-[#0d6efd] duration-500 hover:text-[#2e5691]"
+                    >
+                      {value.category_name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -20,7 +20,11 @@ function AboutChoose() {
           </p>
         </div>
         <div className="lg:w-1/2">
-          <img src="/assets/about-1.jpg" alt="about" className="rounded-lg" />
+          <img
+            src="/assets/about-1.jpg"
+            alt="about"
+            className="rounded-lg object-cover"
+          />
         </div>
       </div>
     </div>
