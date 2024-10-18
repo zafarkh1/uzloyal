@@ -7,7 +7,7 @@
 }
 
 .myContainer .stats-full-width {
-  width: 100vw; /* Full viewport width */
+  width: 99vw; /* Full viewport width */
   margin-left: calc(-50vw + 50%); /* Center the full width element */
 }
 
@@ -15,8 +15,12 @@
   @apply lg:text-4xl text-2xl font-medium;
 }
 
+.heading3 {
+  @apply lg:text-3xl text-xl font-medium;
+}
+
 .heading5 {
-  @apply lg:text-2xl text-base font-medium lg:leading-6 leading-4;
+  @apply lg:text-2xl text-base font-medium lg:leading-8 leading-6;
 }
 
 .text {

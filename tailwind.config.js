@@ -6,10 +6,12 @@ module.exports = {
       colors: {
         primary: "#008251",
         "primary-hover": "#006640",
+        secondary: "#cdb091",
         fontColor: "#1e2e3e",
         sidebarColor: "#f5f5f5",
       },
     },
+
     container: {
       padding: {
         DEFAULT: "1rem",
