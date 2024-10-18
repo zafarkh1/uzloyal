@@ -1,6 +1,6 @@
 import AboutChoose from "./AboutChoose";
 import AboutSlider from "./Slider";
-import Gallery from "./Gallery";
+import CaseStudies from "./CaseStudies";
 import Stats from "../../components/Home/Stats";
 import Experts from "./Experts";
 import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
@@ -21,8 +21,9 @@ function About(props) {
         </div>
         <Cards />
         <AboutSlider />
-        <Gallery />
-        <div className="stats-full-width">
+        <CaseStudies />
+
+        <div className="stats-full-width lg:mt-0 mt-14">
           <Stats />
         </div>
         <Experts />
