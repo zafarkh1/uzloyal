@@ -33,7 +33,7 @@ const CaseAttorney = () => {
           </p>
           <a
             href="/attorneydetails"
-            className="inline-flex items-center mt-4 text-blue-600 hover:underline"
+            className="btn theme-btn border border-[#cdb091] p-2 rounded inline-flex items-center mt-4 text-[#cdb091] hover:underline"
           >
             More About <i className="fa-solid fa-arrow-right"></i>
           </a>

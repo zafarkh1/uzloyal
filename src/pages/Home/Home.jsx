@@ -3,6 +3,7 @@ import AboutChoose from "../About/AboutChoose";
 import Article from "./Article";
 import LatestNews from "./LatestNews";
 import ServiceCard from "./ServiceCard";
+import Consultation from "./Consultation";
 
 function Home(props) {
   return (
@@ -14,6 +15,7 @@ function Home(props) {
       <Article />
       <AboutChoose />
       <LatestNews />
+      <Consultation/>
     </div>
   );
 }
