@@ -4,28 +4,10 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { BiSolidMessageCheck } from "react-icons/bi";
 import Button from "../components/button/Button";
 import { BackgroundofPages } from "../components/utils/backgoundOfPages";
+import { useTranslation } from "react-i18next";
 
-const items = [
-  {
-    id: 1,
-    icon: <MdLocationOn className="text-3xl" />,
-    title: "Office Address",
-    text: "7th Street, Zanjirbogʻ neighborhood, Yakkasaroy district, Tashkent city.",
-  },
-  {
-    id: 2,
-    icon: <FaPhoneVolume className="text-3xl" />,
-    title: "Phone Number",
-    text: "+998 71 234 56 78",
-  },
-  {
-    id: 3,
-    icon: <BiSolidMessageCheck className="text-3xl" />,
-    title: "Email Address",
-    text: "W8I7I@example.com",
-  },
-];
 function Contact() {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -35,6 +17,27 @@ function Contact() {
   const emailIs = document.getElementById("email");
   const phoneIs = document.getElementById("phone");
   const descriptionIs = document.getElementById("description");
+
+  const items = [
+    {
+      id: 1,
+      icon: <MdLocationOn className="text-3xl" />,
+      title: t("contact.title1"),
+      text: t("contact.text1"),
+    },
+    {
+      id: 2,
+      icon: <FaPhoneVolume className="text-3xl" />,
+      title: t("contact.title2"),
+      text: t("contact.text2"),
+    },
+    {
+      id: 3,
+      icon: <BiSolidMessageCheck className="text-3xl" />,
+      title: t("contact.title3"),
+      text: t("contact.text3"),
+    },
+  ];
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -58,16 +61,15 @@ function Contact() {
       .then((resp) => resp.json())
       .then((respons) => {
         if (name.trim() === "") {
-          nameIs.innerHTML = "Ismingizni kiriting xurmat bilan admin";
+          nameIs.innerHTML = t("translation.name");
         } else if (email.trim() === "") {
-          emailIs.innerHTML = "Emailingizni kiriting xurmat bilan admin";
+          emailIs.innerHTML = t("translation.email");
         } else if (phone.trim() === "") {
-          phoneIs.innerHTML = "Phone nomeringizni kiriting xurmat bilan admin";
+          phoneIs.innerHTML = t("translation.phone");
         } else if (description.trim() === "") {
-          descriptionIs.innerHTML =
-            "O'zingiz xaqingizda qisqacha ma'lumot bo'lsa xam yozing xurmat bilan admin";
+          descriptionIs.innerHTML = t("translation.info");
         } else {
-          alert("Muvafaqiyatli yuborildi!...");
+          alert(t("success"));
           nameIs.innerHTML = "";
           emailIs.innerHTML = "";
           phoneIs.innerHTML = "";
@@ -80,7 +82,7 @@ function Contact() {
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Xatolik yuz berdi, qaytadan urinib ko'ring!");
+        alert(t("error"));
       });
   };
 
@@ -104,10 +106,10 @@ function Contact() {
         </div>
 
         <div className="xl:px-52 text-center h-[480px]">
-          <h2 className="heading3">Have Any Question?</h2>
+          <h2 className="heading3">{t("contact.have_any_question")}</h2>
 
           <p className="text-[#525252] text md:mt-4 mt-2 md:mb-8 mb-4">
-            Contact us, we will help you!
+            {t("contact.contact_us_we_will_help")}
           </p>
 
           <form
@@ -120,41 +122,38 @@ function Contact() {
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                   type="text"
-                  placeholder="Your Name"
+                  placeholder={t("consultation.your_name")}
                   className="w-full pl-5 py-2 rounded-[5px] border-[#ebebeb] border-[1px] border-solid"
                 />
                 <span className="text-red-700 text-[14px]" id="name"></span>
               </div>
-
               <div>
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                   type="text"
-                  placeholder="Your Email"
+                  placeholder={t("consultation.your_email")}
                   className="w-full pl-5 py-2 rounded-[5px] border-[#ebebeb] border-[1px] border-solid"
                 />
                 <span className="text-red-700 text-[14px]" id="email"></span>
               </div>
-
               <div>
                 <input
                   onChange={(e) => setPhone(e.target.value)}
                   value={phone}
                   type="text"
-                  placeholder="Your Phone"
+                  placeholder={t("consultation.your_phone")}
                   className="w-full pl-5 py-2 rounded-[5px] border-[#ebebeb] border-[1px] border-solid"
                 />
                 <span className="text-red-700 text-[14px]" id="phone"></span>
               </div>
             </div>
-
             <div>
               <textarea
                 onChange={(e) => setDescription(e.target.value)}
                 value={description}
                 rows="7"
-                placeholder="Describe Your Case in Detail"
+                placeholder={t("consultation.describe_case")}
                 className="w-full resize-none md:mt-8 mt-5 px-5 py-2 rounded-[5px] border-[#ebebeb] border-[1px] border-solid"
               ></textarea>
               <span
@@ -163,7 +162,7 @@ function Contact() {
               ></span>
             </div>
 
-            <Button color={true}/>
+            <Button color={true} />
           </form>
         </div>
       </div>

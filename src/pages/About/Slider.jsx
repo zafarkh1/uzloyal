@@ -1,28 +1,5 @@
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-
-const data = [
-  {
-    id: 1,
-    text: "Elementum viverra tortor rhoncus nunc. Nunc proin lacinia interdum nulla fusce nam. Sagittis dolor hendrerit donec in eu, facilisis lobortis. Hendr laoret pretium veslum egestas.",
-    img: "/assets/services/service2.png",
-    name: "Joe Hart",
-    status: "CEO of MC",
-  },
-  {
-    id: 2,
-    text: "Vestibulum quisque vel diam, cursus neque. Pellentesque at ornare magna, nec commodo arcu. Amet consequat eget posuere arcu mi turpis convallis id ut.",
-    img: "/assets/services/service3.jpeg",
-    name: "Emily Clark",
-    status: "CTO of SoftTech",
-  },
-  {
-    id: 3,
-    text: "Ultrices urna tellus vulputate scelerisque nulla. Quis est sit arcu maecenas, diam elementum convallis dictum euismod. Blandit congue nisl proin ac commodo.",
-    img: "/assets/services/service4.jpeg",
-    name: "Daniel Turner",
-    status: "Lead Designer at CreArt",
-  },
-];
 
 var settings = {
   infinite: true,
@@ -36,6 +13,32 @@ var settings = {
 };
 
 function AboutSlider(props) {
+  const { t } = useTranslation();
+
+  const data = [
+    {
+      id: 1,
+      text: t("silider.text"),
+      img: "/assets/services/service2.png",
+      name: "Joe Hart",
+      status: t("silider.status"),
+    },
+    {
+      id: 2,
+      text: t("silider.text2"),
+      img: "/assets/services/service3.jpeg",
+      name: "Emily Clark",
+      status: t("silider.status2"),
+    },
+    {
+      id: 3,
+      text: t("silider.text3"),
+      img: "/assets/services/service4.jpeg",
+      name: "Daniel Turner",
+      status: t("silider.status3"),
+    },
+  ];
+
   return (
     <div className="lg:flex mt-20">
       <div className="lg:w-1/2 bg-[#172533] text-white">

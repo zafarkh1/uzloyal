@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const BackgroundofPages = ({ heading, text }) => {
+  const { t } = useTranslation();
   return (
     <div
       className="bg-cover bg-no-repeat bg-center lg:h-80 h-48 flex items-center"
@@ -8,9 +11,11 @@ export const BackgroundofPages = ({ heading, text }) => {
       }}
     >
       <div className="myContainer text-white">
-        <h2 className="heading2 mb-8">{heading}</h2>
+        <h2 className="heading2 mb-8">{t("about.title1")}</h2>
+
         <h5 className="heading5">
-          Home - <span className="text-blue-400">{text}</span>
+          {t("about.title3")} -
+          <span className="text-blue-400">{t("about.title2")}</span>
         </h5>
       </div>
     </div>

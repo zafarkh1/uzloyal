@@ -1,31 +1,5 @@
+import { useTranslation } from "react-i18next";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
-
-const data = [
-  {
-    id: 1,
-    name: "Cody Fisher",
-    service: "Criminal Defense",
-    img: "/assets/services/service19.jpeg",
-  },
-  {
-    id: 2,
-    name: "Jane Doe",
-    service: "Criminal Defense",
-    img: "/assets/services/service18.jpeg",
-  },
-  {
-    id: 3,
-    name: "John Smith",
-    service: "Criminal Defense",
-    img: "/assets/services/service17.jpeg",
-  },
-  {
-    id: 4,
-    name: "Sarah Johnson",
-    service: "Criminal Defense",
-    img: "/assets/services/service16.jpeg",
-  },
-];
 
 const icons = [
   {
@@ -46,11 +20,43 @@ const icons = [
 ];
 
 function Experts(props) {
+  const { t } = useTranslation();
+  const data = [
+    {
+      id: 1,
+      name: t("experts.name"),
+      service: t("experts.service"),
+      img: "/assets/services/service19.jpeg",
+    },
+    {
+      id: 2,
+      name: t("experts.name1"),
+      service: t("experts.service1"),
+      img: "/assets/services/service18.jpeg",
+    },
+    {
+      id: 3,
+      name: t("experts.name2"),
+      service: t("experts.service2"),
+      img: "/assets/services/service17.jpeg",
+    },
+    {
+      id: 4,
+      name: t("experts.name3"),
+      service: t("experts.service3"),
+      img: "/assets/services/service16.jpeg",
+    },
+  ];
+
   return (
     <div className="lg:my-10 my-4">
       <div className="text-center lg:my-10 my-6">
-        <p className="heading5 text-[#cdb091]">Qualified Attorneys</p>
-        <h5 className="heading2 lg:my-3 my-1">Meet Our Experts</h5>
+        <p className="heading5 text-[#cdb091]">
+          {t("experts.qualified_attorneys")}
+        </p>
+        <h5 className="heading2 lg:my-3 my-1">
+          {t("experts.meet_our_experts")}
+        </h5>
         <p className="w-24 h-[1px] mx-auto bg-[#cdb091] hidden md:inline-block"></p>
       </div>
       <div className="grid md:grid-cols-4 grid-cols-2 gap-4 text-white">

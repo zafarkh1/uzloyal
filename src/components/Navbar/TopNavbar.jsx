@@ -70,9 +70,7 @@ function TopNavbar({ navs }) {
 
             {/*       Time     */}
             <div className="hidden lg:block">
-              <p className="text-primary text-sm">
-                Mon-Fri from 09:00 to 18:00 Tashkent
-              </p>
+              <p className="text-primary text-sm">{t("topnavbar.hours")}</p>
             </div>
 
             {/*       Languages     */}
@@ -96,7 +94,7 @@ function TopNavbar({ navs }) {
                 window.scrollTo(0, 0);
               }}
             >
-              Get consultation
+              {t("topnavbar.consultation")}
             </button>
 
             {/*       Nav Links */}

@@ -4,12 +4,14 @@ import PostSidebar from "../../components/Sidebars/PostSidebar";
 import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
 import useGetData from "../../api/api";
 import { useLangStore } from "../../components/utils/zustand/useLangStore";
+import { useTranslation } from "react-i18next";
 
 const News = () => {
   const navigate = useNavigate();
   const news = useGetData();
-  const { currentLanguage } = useLangStore();
+  const { t } = useTranslation();
 
+  const { currentLanguage } = useLangStore();
   const getAuthorName = (item) => {
     if (currentLanguage === "uz") return item?.title_uz;
     if (currentLanguage === "ru") return item?.title_ru;
@@ -39,7 +41,7 @@ const News = () => {
               />
               <ul className="flex gap-4 text">
                 <li>
-                  By{" "}
+                  {t("news.by")}
                   <span
                     className="text-secondary cursor-pointer"
                     onClick={() => {
@@ -47,7 +49,7 @@ const News = () => {
                       window.scrollTo(0, 0);
                     }}
                   >
-                    {post.author}
+                    {getAuthorName(post)}
                   </span>
                 </li>
                 <li>{post.created_at.slice(0, 10)}</li>
@@ -60,7 +62,7 @@ const News = () => {
                   window.scrollTo(0, 0);
                 }}
               >
-                ЧИТАТЬ ДАЛЕЕ...
+                {t("news.read_more")}
               </h5>
             </div>
           ))}

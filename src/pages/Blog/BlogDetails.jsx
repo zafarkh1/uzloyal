@@ -3,11 +3,25 @@ import PostSidebar from "../../components/Sidebars/PostSidebar";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import useGetData from "../../api/api";
 import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
+import { useLangStore } from "../../components/utils/zustand/useLangStore";
+import { useTranslation } from "react-i18next";
 
 const BlogDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { blogs } = useGetData();
+  const { t } = useTranslation();
+
+  // translate language
+  const { currentLanguage } = useLangStore();
+  const getBlogDetailsLanguage = (item) => {
+    if (currentLanguage === "uz") return item?.title_uz;
+    if (currentLanguage === "ru") return item?.title_ru;
+    if (currentLanguage === "cn") return item?.title_zh;
+    if (currentLanguage === "tr") return item?.title_tr;
+    return item?.title_en;
+  };
+  //
 
   const currentPostIndex = blogs.findIndex((post) => post.id === id);
   const currentPost = blogs[currentPostIndex];
@@ -76,7 +90,9 @@ const BlogDetails = () => {
                       className="text-left text-lg text-gray-600 hover:text-[#c3af41] flex items-center mb-2"
                     >
                       <span className="mr-2">&#8592;</span>
-                      <span className="font-medium">Previous</span>
+                      <span className="font-medium">
+                        {t("blogdetails.previous")}
+                      </span>
                     </button>
                     <p>{prevPost.title_en}</p>
                   </div>
@@ -88,7 +104,9 @@ const BlogDetails = () => {
                       onClick={handleNextClick}
                       className="text-right text-lg text-gray-600 hover:text-[#c3af41] flex items-center justify-end mb-2"
                     >
-                      <span className="font-medium">Next</span>
+                      <span className="font-medium">
+                        {t("blogdetails.next")}
+                      </span>
                       <span className="ml-2">&#8594;</span>
                     </button>
                     <p>{nextPost.title_en}</p>
@@ -98,9 +116,11 @@ const BlogDetails = () => {
             </div>
           ) : (
             <div className="text-center">
-              <h2 className="text-3xl font-bold">Post Not Found</h2>
+              <h2 className="text-3xl font-bold">
+                {t("blogdetails.notfound")}
+              </h2>
               <p className="mt-4 text-gray-600">
-                The post you're looking for does not exist.
+                {t("blogdetails.notfound_message")}
               </p>
             </div>
           )}

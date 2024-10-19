@@ -1,24 +1,27 @@
 import CountUp from "react-countup";
-
-const items = [
-  {
-    id: 1,
-    title: "Trusted Clients",
-    number: 150,
-  },
-  {
-    id: 2,
-    title: "Case won",
-    number: 95,
-  },
-  {
-    id: 3,
-    title: "Lawers",
-    number: 20,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 function Stats() {
+  const { t } = useTranslation();
+
+  const items = [
+    {
+      id: 1,
+      title: t("stats.title1"),
+      number: 150,
+    },
+    {
+      id: 2,
+      title: t("stats.title2"),
+      number: 95,
+    },
+    {
+      id: 3,
+      title: t("stats.title3"),
+      number: 20,
+    },
+  ];
+
   return (
     <div className="lg:shadow-lg shadow-md shadow-black lg:my-10 my-4">
       <div className="myContainer">

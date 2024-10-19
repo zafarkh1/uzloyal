@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FaTelegram, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const icons = [
@@ -108,16 +109,14 @@ const privacy = [
 ];
 
 function Footer(props) {
+  const { t } = useTranslation();
   return (
     <div className="bg-primary pt-16">
       <div className="myContainer text-white">
         <div className="flex md:flex-row flex-col justify-between border-b border-fontColor pb-10">
           <div className="flex flex-col gap-6">
             <h2 className="heading2">UzLoyal</h2>
-            <p className="w-60">
-              We are the best legal firm that can provide you with comprehensive
-              assistance!
-            </p>
+            <p className="w-60">{t("footer.description")}</p>
             <div className="flex gap-4">
               {icons.map((item) => (
                 <a

@@ -1,9 +1,136 @@
 {
-    "about": {
-      "heading": "Biz haqimizda",
-      "subheading": "Nega bizni tanlashadi?",
-      "title": "Biz sizga har tomonlama yordam bera oladigan eng yaxshi yuridik firmamiz!",
-      "description": "LOYAL yuridik firmasi O‘zbekiston Respublikasi bo‘ylab biznes (xususiy tadbirkorlar, kompaniyalar va firmalar, MChJ, OAJ, barcha mulkchilik shaklidagi tashkilotlar) uchun professional yuridik xizmatlar ko‘rsatadi. LOYAL yuridik firmasiga murojaat qilib, o‘z huquqlaringizni himoya qilishda malakali tezkor yordamga va taqdim etilgan ma’lumotlarning to‘liq maxfiyligiga ishonishingiz mumkin. Sizning ishingizni biznesga yuridik xizmatlar ko‘rsatishga ixtisoslashgan, ushbu sohada yetarli bilim va tajribaga ega bo‘lgan, iqtisodiyot va huquqni birdek yaxshi biladigan va biznesni tashkil qilish va yuritishning barcha nozik tomonlarini biladigan professional shug‘ullanishiga har doim ishonch hosil qilishingiz mumkin."
-    }
+  "error": "Xatolik yuz berdi, qaytadan urinib ko'ring!",
+  "success": "Muvafaqiyatli yuborildi!...",
+  "translation": {
+    "name": "Ismingizni kiriting, xurmat bilan, admin",
+    "email": "Emailingizni kiriting, xurmat bilan, admin",
+    "phone": "Phone nomeringizni kiriting, xurmat bilan, admin",
+    "info": "O'zingiz xaqingizda qisqacha ma'lumot bo'lsa, yozing, xurmat bilan, admin"
+  },
+  "about": {
+    "title1": "Biz haqimizda",
+    "title2": "Nima uchun bizni tanlaysiz?",
+    "title3": "Bosh sahifa",
+    "title4": "Qanday yordam bera olamiz?",
+    "title5": "Huquqiy amaliyot sohalari",
+    "heading": "Biz haqimizda",
+    "subheading": "Nega bizni tanlashadi?",
+    "title": "Biz sizga har tomonlama yordam bera oladigan eng yaxshi yuridik firmamiz!",
+    "description": "LOYAL yuridik firmasi O‘zbekiston Respublikasi bo‘ylab biznes (xususiy tadbirkorlar, kompaniyalar va firmalar, MChJ, OAJ, barcha mulkchilik shaklidagi tashkilotlar) uchun professional yuridik xizmatlar ko‘rsatadi. LOYAL yuridik firmasiga murojaat qilib, o‘z huquqlaringizni himoya qilishda malakali tezkor yordamga va taqdim etilgan ma’lumotlarning to‘liq maxfiyligiga ishonishingiz mumkin. Sizning ishingizni biznesga yuridik xizmatlar ko‘rsatishga ixtisoslashgan, ushbu sohada yetarli bilim va tajribaga ega bo‘lgan, iqtisodiyot va huquqni birdek yaxshi biladigan va biznesni tashkil qilish va yuritishning barcha nozik tomonlarini biladigan professional shug‘ullanishiga har doim ishonch hosil qilishingiz mumkin."
+  },
+  "button": {
+    "submitNow": "Hozir yuboring"
+  },
+  "category": {
+    "civilDisputesApplications": "БОШҚА ФУҚАРОЛИК НИЗОЛАРИ БЎЙИЧА АРИЗАЛАР"
+  },
+  "footer": {
+    "description": "Biz sizga har tomonlama yordam bera oladigan eng yaxshi yuridik firmamiz!"
+  },
+  "topnavbar": {
+    "hours": "Dush-Shan 09:00 dan 18:00 gacha Toshkent",
+    "consultation": "Konsultatsiya oling"
+  },
+  "services": { "services": "Xizmatlar" },
+  "blogdetails": {
+    "previous": "Oldingi",
+    "next": "Keyingi",
+    "notfound": "Post topilmadi",
+    "notfound_message": "Siz qidirayotgan post mavjud emas."
+  },
+  "blogs": {
+    "readmore": "Batafsil o'qish ..."
+  },
+  "consultation": {
+    "contactinfo": "Aloqa ma'lumotlari",
+    "more_info_contact": "Siz ushbu aloqa ma'lumotlari orqali qo'shimcha ma'lumot olishingiz mumkin.",
+    "office_address": "Ofis manzili",
+    "address": "7-kўcha, Zanjirbogʻ mahallasi, Yakkasaroy tumani, Toshkent shahri.",
+    "email": "Elektron pochta",
+    "phone_number": "Telefon raqami",
+    "office_hours": "Ish vaqti",
+    "office_hours_schedule": "Dushanba-Juma, 09:00 dan 18:00 gacha, Toshkent",
+    "contact_us": "Biz bilan bog'laning",
+    "consultation": "Konsultatsiya",
+    "your_name": "Ismingiz",
+    "your_email": "Elektron pochta manzilingiz",
+    "your_phone": "Telefon raqamingiz",
+    "describe_case": "Iltimos, ishni batafsil tushuntiring"
+  },
+  "latestNews": {
+    "news": "Yangiliklar",
+    "latest_news": "So'nggi yangiliklar",
+    "read_more": "Batafsil o'qish"
+  },
+  "news": { "by": "Tomonidan", "read_more": "Batafsil o'qish..." },
+  "service_not_found": { "service_not_found": "Xizmat topilmadi." },
+  "contact": {
+    "have_any_question": "Savollaringiz bormi?",
+    "contact_us_we_will_help": "Biz bilan bog'laning, biz sizga yordam beramiz!",
+    "title1": "Ofis manzili",
+    "text1": "7-ch Street, Zanjirbogʻ mahallasi, Yakkasaroy tumani, Toshkent shahri.",
+    "title2": "Telefon raqami",
+    "text2": "+998 71 234 56 78",
+    "title3": "Elektron pochta manzili",
+    "text3": "W8I7I@example.com"
+  },
+  "applications": "Arizalar",
+  "contracts": "Shartnomalar",
+  "laws": "Qonunlar",
+  "supreme_court_resolutions": "Oliy sud Plenum qarorlari",
+  "stats": {
+    "title1": "Ishonchli mijozlar",
+    "title2": "Ish yutdi",
+    "title3": "Yuristlar"
+  },
+  "article": {
+    "articles": "Maqolalar",
+    "latest_update": "Eng so'nggi maqola yangilanishi"
+  },
+  "topnavbarlink": {
+    "title1": "Bosh sahifa",
+    "title2": "Biz haqimizda",
+    "title3": "Aloqa",
+    "title4": "Bizning nashrlarimiz"
+  },
+  "bottomnavbar": {
+    "title1": "Yangiliklar",
+    "title2": "Huquqiy kutubxona",
+    "title3": "Xizmatlar",
+    "title4": "Hujjat namunalar"
+  },
+  "gallery": {
+    "assistMessage": "Qanday yordam bera olamiz?",
+    "legalAreas": "Huquqiy amaliyot sohalari"
+  },
+  "silider": {
+    "text": "Elementum viverra tortor rhoncus nunc. Proin lacinia hech qanday to'xtamasdan amalga oshadi. Sagittis dolor, hendrerit bilan birga, eu facilisis lobortisda amalga oshiriladi.",
+    "status": "MC bosh direktori",
+    "text2": "Vestibulum quisque vel diam, cursus neque. Pellentesque at ornare magna, nec commodo arcu. Amet consequat eget posuere arcu mi turpis convallis id ut.",
+    "status2": "SoftTech ning CTO",
+    "text3": "Ultrices urna tellus vulputate scelerisque nulla. Quis est sit arcu maecenas, diam elementum convallis dictum euismod. Blandit congue nisl proin ac commodo.",
+    "status3": "CreArt da Lead Designer"
+  },
+  "experts": {
+    "qualified_attorneys": "Malakali Advokatlar",
+    "meet_our_experts": "Bizning Mutaxassislarimiz Bilan Tanishing",
+    "name": "Kodi Fisher",
+    "service": "Jinoiy Himoya",
+    "name1": "Jeyn Do",
+    "service1": "Jinoiy Himoya",
+    "name2": "Jon Smit",
+    "service2": "Jinoiy Himoya",
+    "name3": "Sara Jonson",
+    "service3": "Jinoiy Himoya"
+  },
+  "documents": {
+    "category_name1": "Бошқа фуқаролик низолари бўйича аризалар",
+    "category_name2": "Оилавий низолар бўйича аризалар",
+    "category_name3": "Уй-жой низолари бўйича аризалар",
+    "category_name4": "Меҳнат низолари бўйича аризалар",
+    "shartnomalar1": "Кўчмас мулкка оид шартномалар",
+    "shartnomalar2": "Автотранспортларга оид шартномалар",
+    "shartnomalar3": "Юридик шахсларга оид шартномалар",
+    "talabnoma": "Shartnoma yuzasidan talabnoma"
   }
-  
+}

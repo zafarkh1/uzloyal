@@ -1,9 +1,131 @@
 {
-    "about": {
-      "heading": "关于我们",
-      "subheading": "为什么选择我们？",
-      "title": "我们是能够为您提供全面帮助的最佳法律事务所！",
-      "description": "‘LOYAL’律师事务所为整个乌兹别克斯坦共和国的企业（私人企业家、公司和公司、有限责任公司、股份公司、所有制形式的组织）提供专业的法律服务。通过联系LOYAL律师事务所，您可以指望获得保护您权利的及时专业帮助，并完全保密提供的信息。您始终可以确信，您的案件由专门从事向企业提供法律服务的专业人士处理，该专业人士在该领域拥有足够的知识和经验，精通经济学和法律，并了解组织和经营企业的所有复杂性。"
-    }
+  "error": "发生错误，请再试一次！",
+  "success": "成功发送！...",
+  "translation": {
+    "name": "请输入您的姓名，敬上，管理员",
+    "email": "请输入您的电子邮件，敬上，管理员",
+    "phone": "请输入您的电话号码，敬上，管理员",
+    "info": "如果您有关于自己的简要信息，请写下，敬上，管理员"
+  },
+  "about": {
+    "title1": "关于我们",
+    "title2": "为什么选择我们？",
+    "title3": "首页",
+    "title4": "我们如何帮助您？",
+    "title5": "法律实践领域",
+    "heading": "关于我们",
+    "subheading": "为什么选择我们？",
+    "title": "我们是能够为您提供全面帮助的最佳法律事务所！",
+    "description": "‘LOYAL’律师事务所为整个乌兹别克斯坦共和国的企业（私人企业家、公司和公司、有限责任公司、股份公司、所有制形式的组织）提供专业的法律服务。通过联系LOYAL律师事务所，您可以指望获得保护您权利的及时专业帮助，并完全保密提供的信息。您始终可以确信，您的案件由专门从事向企业提供法律服务的专业人士处理，该专业人士在该领域拥有足够的知识和经验，精通经济学和法律，并了解组织和经营企业的所有复杂性。"
+  },
+  "button": {
+    "submitNow": "立即提交"
+  },
+  "category": {
+    "civilDisputesApplications": "其他民事争议的申请"
+  },
+  "footer": {
+    "description": "我们是提供全面帮助的最佳法律事务所！"
+  },
+  "topnavbar": {
+    "hours": "周一至周五 09:00 到 18:00 塔什干",
+    "consultation": "获取咨询"
+  },
+  "services": { "services": "服务" },
+  "blogdetails": {
+    "previous": "上一个",
+    "next": "下一个",
+    "notfound": "未找到帖子",
+    "notfound_message": "您查找的帖子不存在。"
+  },
+  "blogs": {
+    "readmore": "阅读更多 ..."
+  },
+  "consultation": {
+    "contactinfo": "联系信息",
+    "more_info_contact": "您可以通过这些联系信息找到更多信息。",
+    "office_address": "办公室地址",
+    "address": "第七街，Zanjirbogʻ社区，Yakkasaroy区，塔什干市。",
+    "email": "电子邮件",
+    "phone_number": "电话号码",
+    "office_hours": "办公时间",
+    "office_hours_schedule": "周一至周五，09:00 至 18:00，塔什干",
+    "contact_us": "联系我们",
+    "consultation": "咨询",
+    "your_name": "您的名字",
+    "your_email": "您的电子邮件",
+    "your_phone": "您的电话",
+    "describe_case": "详细描述您的案例"
+  },
+  "latestNews": {
+    "news": "新闻",
+    "latest_news": "最新新闻更新",
+    "read_more": "阅读更多"
+  },
+  "news": { "by": "由", "read_more": "阅读更多..." },
+  "service_not_found": { "service_not_found": "找不到服务。" },
+  "contact": {
+    "have_any_question": "有任何问题吗？",
+    "contact_us_we_will_help": "联系我们，我们会帮助你！",
+    "title1": "办公室地址",
+    "text1": "第7街，Zanjirbogʻ社区，Yakkasaroy区，塔什干市。",
+    "title2": "电话号码",
+    "text2": "+998 71 234 56 78",
+    "title3": "电子邮件地址",
+    "text3": "W8I7I@example.com"
+  },
+  "applications": "申请",
+  "contracts": "合同",
+  "laws": "法律",
+  "supreme_court_resolutions": "最高法院全体会议决议",
+  "stats": { "title1": "可信客户", "title2": "案件胜诉", "title3": "律师" },
+  "article": { "articles": "文章", "latest_update": "最新文章更新" },
+
+  "topnavbarlink": {
+    "title1": "首页",
+    "title2": "关于我们",
+    "title3": "联系方式",
+    "title4": "我们的出版物"
+  },
+
+  "bottomnavbar": {
+    "title1": "新闻",
+    "title2": "法律图书馆",
+    "title3": "服务",
+    "title4": "文档示例"
+  },
+  "gallery": {
+    "assistMessage": "我们如何帮助您？",
+    "legalAreas": "法律实践领域"
+  },
+  "silider": {
+    "text": "元素 viverra tortor rhoncus 现在。Proin lacinia 无缝移动。Sagittis dolor, 与 hendrerit 相结合。",
+    "status": "MC 首席执行官",
+    "text2": "Vestibulum quisque vel diam, cursus neque. Pellentesque at ornare magna, nec commodo arcu. Amet consequat eget posuere arcu mi turpis convallis id ut.",
+    "status2": "SoftTech 的首席技术官",
+    "text3": "Ultrices urna tellus vulputate scelerisque nulla. Quis est sit arcu maecenas, diam elementum convallis dictum euismod. Blandit congue nisl proin ac commodo.",
+    "status3": "CreArt 的首席设计师"
+  },
+  "experts": {
+    "qualified_attorneys": "合格的律师",
+    "meet_our_experts": "认识我们的专家",
+    "name": "科迪·费舍尔",
+    "service": "刑事辩护",
+    "name1": "简·多",
+    "service1": "刑事辩护",
+    "name2": "约翰·史密斯",
+    "service2": "刑事辩护",
+    "name3": "萨拉·约翰逊",
+    "service3": "刑事辩护"
+  },
+  "documents": {
+    "category_name1": "其他民事纠纷申请",
+    "category_name2": "家庭纠纷申请",
+    "category_name3": "房屋纠纷申请",
+    "category_name4": "劳动纠纷申请",
+    "shartnomalar1": "与不动产相关的合同",
+    "shartnomalar2": "与机动车相关的合同",
+    "shartnomalar3": "针对法人实体的合同",
+    "talabnoma": "合同请求"
   }
-  
+}

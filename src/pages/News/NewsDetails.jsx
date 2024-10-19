@@ -3,11 +3,25 @@ import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
 import useGetData from "../../api/api";
 import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
+import { useLangStore } from "../../components/utils/zustand/useLangStore";
+import { useTranslation } from "react-i18next";
 
 const NewsDetails = () => {
+  const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
   const { news } = useGetData();
+
+  // translate language
+  const { currentLanguage } = useLangStore();
+  const getNewsDetailsLanguage = (item) => {
+    if (currentLanguage === "uz") return item?.title_uz;
+    if (currentLanguage === "ru") return item?.title_ru;
+    if (currentLanguage === "cn") return item?.title_zh;
+    if (currentLanguage === "tr") return item?.title_tr;
+    return item?.title_en;
+  };
+  //
 
   const currentPostIndex = news.findIndex((post) => post.id === id);
   const currentPost = news[currentPostIndex];
@@ -43,21 +57,25 @@ const NewsDetails = () => {
               <div>
                 <ul className="flex items-center justify-start text-gray-600">
                   <li className="flex items-center">
-                    <span>By </span>
+                    <span>{t("news.by")}</span>
                     <Link
                       to={`/newsdetails/${currentPost.id}`}
                       className="ml-1 hover:text-[#c3af41]"
                     >
-                      {currentPost.author}
+                      {getNewsDetailsLanguage(currentPost)}
                     </Link>
                   </li>
                   <li className="flex items-center ml-10">
-                    <span>{currentPost.created_at.slice(0, 10)}</span>
+                    <span>
+                      {getNewsDetailsLanguage(currentPost).slice(0, 10)}
+                    </span>
                   </li>
                 </ul>
               </div>
 
-              <h2 className="mt-4 mb-6 heading2">{currentPost.title_en}</h2>
+              <h2 className="mt-4 mb-6 heading2">
+                {getNewsDetailsLanguage(currentPost)}
+              </h2>
 
               <div className="my-10">
                 <img
@@ -76,7 +94,9 @@ const NewsDetails = () => {
                       className="text-left text-lg text-gray-600 hover:text-[#c3af41] flex items-center"
                     >
                       <span className="mr-2">&#8592;</span>
-                      <span className="font-medium">Previous</span>
+                      <span className="font-medium">
+                        {t("blogdetails.previous")}
+                      </span>
                     </button>
                     <p>{prevPost.title_en}</p>
                   </div>
@@ -88,7 +108,9 @@ const NewsDetails = () => {
                       onClick={handleNextClick}
                       className="text-right text-lg text-gray-600 hover:text-[#c3af41] flex items-center justify-end"
                     >
-                      <span className="font-medium">Next</span>
+                      <span className="font-medium">
+                        {t("blogdetails.next")}
+                      </span>
                       <span className="ml-2">&#8594;</span>
                     </button>
                     <p>{nextPost.title_en}</p>
@@ -98,9 +120,11 @@ const NewsDetails = () => {
             </div>
           ) : (
             <div className="text-center">
-              <h2 className="text-3xl font-bold">Post Not Found</h2>
+              <h2 className="text-3xl font-bold">
+                {t("blogdetails.notfound")}
+              </h2>
               <p className="mt-4 text-gray-600">
-                The post you're looking for does not exist.
+                {t("blogdetails.notfound_message")}
               </p>
             </div>
           )}

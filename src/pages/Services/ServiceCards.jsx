@@ -1,8 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import useGetData from "../../api/api";
+import { useLangStore } from "../../components/utils/zustand/useLangStore";
 
 function Cards(props) {
   const { services } = useGetData();
+
+  //
+  const { currentLanguage } = useLangStore();
+  const getServicesCards = (item) => {
+    if (currentLanguage === "uz") return item?.title_uz;
+    if (currentLanguage === "ru") return item?.title_ru;
+    if (currentLanguage === "cn") return item?.title_zh;
+    if (currentLanguage === "tr") return item?.title_tr;
+    return item?.title_en;
+  };
+  //
+
   const navigate = useNavigate();
 
   return (
@@ -30,7 +43,7 @@ function Cards(props) {
                 window.scrollTo(0, 0);
               }}
             >
-              {service.title_en}
+              {getServicesCards(service)}
             </h5>
           </div>
         </div>

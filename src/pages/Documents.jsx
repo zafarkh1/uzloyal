@@ -2,45 +2,47 @@ import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { BackgroundofPages } from "../components/utils/backgoundOfPages";
+import { useTranslation } from "react-i18next";
 
 function Documents(props) {
+  const { t } = useTranslation();
   const arizalar = [
     {
-      category_name: "Бошқа фуқаролик низолари бўйича аризалар",
+      category_name: t("documents.category_name1"),
       category_id: 12,
     },
     {
-      category_name: "Оилавий низолар бўйича аризалар",
+      category_name: t("documents.category_name2"),
       category_id: 10,
     },
     {
-      category_name: "Уй-жой низолари бўйича аризалар",
+      category_name: t("documents.category_name3"),
       category_id: 9,
     },
     {
-      category_name: "Меҳнат низолари бўйича аризалар",
+      category_name: t("documents.category_name4"),
       category_id: 11,
     },
   ];
 
   const shartnomalar = [
     {
-      category_name: "Кўчмас мулкка оид шартномалар",
+      category_name: t("documents.shartnomalar1"),
       category_id: 14,
     },
     {
-      category_name: "Автотранспортларга оид шартномалар",
+      category_name: t("documents.shartnomalar2"),
       category_id: 15,
     },
     {
-      category_name: "Юридик шахсларга оид шартномалар",
+      category_name: t("documents.shartnomalar3"),
       category_id: 16,
     },
   ];
 
   const talabnoma = [
     {
-      category_name: "Shartnoma yuzasidan talabnoma",
+      category_name: t("documents.talabnoma"),
       category_id: 18,
     },
   ];
@@ -62,7 +64,7 @@ function Documents(props) {
               </div>
               <div>
                 <h1 className="heading3 mb-3 text-[#253858] sm:text-left text-center">
-                  Аризалар
+                  {t("applications")}
                 </h1>
                 {arizalar.map((value, index) => (
                   <div key={index} className="flex gap-2 items-center">
@@ -77,7 +79,6 @@ function Documents(props) {
                 ))}
               </div>
             </div>
-
             {/* Shartnomalar Section */}
             <div className="flex md:flex-row flex-col items-start md:justify-start justify-center bg-white lg:p-8 p-4 rounded-lg md:gap-10 gap-4">
               <div className="flex justify-center items-center sm:w-auto w-full">
@@ -89,7 +90,7 @@ function Documents(props) {
               </div>
               <div>
                 <h1 className="heading3 mb-3 text-[#253858] sm:text-left text-center">
-                  Шартномалар
+                  {t("contracts")}
                 </h1>
                 {shartnomalar.map((value, index) => (
                   <div key={index} className="flex gap-2 items-center">
@@ -104,7 +105,6 @@ function Documents(props) {
                 ))}
               </div>
             </div>
-
             {/* Talabnoma Section */}
             <div className="flex md:flex-row flex-col items-start md:justify-start justify-center bg-white lg:p-8 p-4 rounded-lg md:gap-10 gap-4">
               <div className="flex justify-center items-center sm:w-auto w-full">
@@ -116,7 +116,7 @@ function Documents(props) {
               </div>
               <div>
                 <h1 className="heading3 mb-3 text-[#253858] sm:text-left text-center">
-                  Шартномалар
+                  {t("contracts")}
                 </h1>
                 {talabnoma.map((value, index) => (
                   <div key={index} className="flex gap-2 items-center">

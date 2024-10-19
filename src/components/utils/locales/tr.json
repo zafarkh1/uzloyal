@@ -1,9 +1,138 @@
 {
-    "about": {
-      "heading": "Hakkımızda",
-      "subheading": "Neden Bizi Seçmelisiniz?",
-      "title": "Size kapsamlı yardım sağlayabilecek en iyi hukuk firmasıyız!",
-      "description": "'LOYAL' Hukuk Bürosu, Özbekistan Cumhuriyeti genelinde işletmelere (özel girişimciler, şirketler ve firmalar, LLC'ler, PJSC'ler, her türlü mülkiyet biçimine sahip kuruluşlar) profesyonel hukuki hizmetler sunmaktadır. LOYAL hukuk bürosuna başvurduğunuzda, haklarınızı koruma konusunda nitelikli ve hızlı bir yardım alacağınızdan ve sağlanan bilgilerin tam gizliliğinden emin olabilirsiniz. İşinizin, işletmelere hukuki hizmetler sağlama konusunda uzmanlaşmış, bu alanda yeterli bilgi ve deneyime sahip, ekonomi ve hukuka eşit derecede hâkim olan ve iş kurma ve yürütme inceliklerini bilen bir profesyonel tarafından ele alındığından her zaman emin olabilirsiniz."
-    }
+  "error": "Bir hata oluştu, lütfen tekrar deneyin!",
+  "success": "Başarıyla gönderildi!...",
+  "translation": {
+    "name": "Adınızı girin, saygılarımla, admin",
+    "email": "E-postanızı girin, saygılarımla, admin",
+    "phone": "Telefon numaranızı girin, saygılarımla, admin",
+    "info": "Kendiniz hakkında kısaca bilgi varsa, lütfen yazın, saygılarımla, admin"
+  },
+  "about": {
+    "title1": "Hakkımızda",
+    "title2": "Neden Bizi Seçmelisiniz?",
+    "title3": "Ana Sayfa",
+    "title4": "Size nasıl yardımcı olabiliriz?",
+    "title5": "Hukuk Uygulama Alanları",
+    "heading": "Hakkımızda",
+    "subheading": "Neden Bizi Seçmelisiniz?",
+    "title": "Size kapsamlı yardım sağlayabilecek en iyi hukuk firmasıyız!",
+    "description": "'LOYAL' Hukuk Bürosu, Özbekistan Cumhuriyeti genelinde işletmelere (özel girişimciler, şirketler ve firmalar, LLC'ler, PJSC'ler, her türlü mülkiyet biçimine sahip kuruluşlar) profesyonel hukuki hizmetler sunmaktadır. LOYAL hukuk bürosuna başvurduğunuzda, haklarınızı koruma konusunda nitelikli ve hızlı bir yardım alacağınızdan ve sağlanan bilgilerin tam gizliliğinden emin olabilirsiniz. İşinizin, işletmelere hukuki hizmetler sağlama konusunda uzmanlaşmış, bu alanda yeterli bilgi ve deneyime sahip, ekonomi ve hukuka eşit derecede hâkim olan ve iş kurma ve yürütme inceliklerini bilen bir profesyonel tarafından ele alındığından her zaman emin olabilirsiniz."
+  },
+  "button": {
+    "submitNow": "Şimdi Gönder"
+  },
+  "category": {
+    "civilDisputesApplications": "Diğer Hukukî İhtilaflarla İlgili Başvurular"
+  },
+  "footer": {
+    "description": "Size kapsamlı yardım sağlayabilecek en iyi hukuk firmasıyız!"
+  },
+  "topnavbar": {
+    "hours": "Pzt-Cuma 09:00'dan 18:00'a kadar Taşkent",
+    "consultation": "Danışmanlık Al"
+  },
+  "services": { "services": "Hizmetler" },
+  "blogdetails": {
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "notfound": "Gönderi Bulunamadı",
+    "notfound_message": "Aradığınız gönderi mevcut değil."
+  },
+  "blogs": {
+    "readmore": "Devamını oku ..."
+  },
+  "consultation": {
+    "contactinfo": "İletişim Bilgileri",
+    "more_info_contact": "Bu iletişim bilgileri ile daha fazla bilgi bulabilirsiniz.",
+    "office_address": "Ofis Adresi",
+    "address": "7. Sokak, Zanjirbogʻ Mahallesi, Yakkasaroy İlçesi, Taşkent Şehri.",
+    "email": "E-posta",
+    "phone_number": "Telefon Numarası",
+    "office_hours": "Ofis Saatleri",
+    "office_hours_schedule": "Pzt-Cuma 09:00'dan 18:00'e kadar, Taşkent",
+    "contact_us": "Bizimle İletişime Geçin",
+    "consultation": "Danışma",
+    "your_name": "Adınız",
+    "your_email": "E-posta adresiniz",
+    "your_phone": "Telefon numaranız",
+    "describe_case": "Lütfen davanızı ayrıntılı olarak tanımlayın"
+  },
+  "latestNews": {
+    "news": "Haberler",
+    "latest_news": "Son Haber Güncellemesi",
+    "read_more": "Devamını oku"
+  },
+  "news": { "by": "Tarafından", "read_more": "Devamını oku..." },
+  "service_not_found": { "service_not_found": "Hizmet bulunamadı." },
+  "contact": {
+    "have_any_question": "Herhangi bir sorunuz var mı?",
+    "contact_us_we_will_help": "Bizimle iletişime geçin, size yardımcı olacağız!",
+    "title1": "Ofis Adresi",
+    "text1": "7. Cadde, Zanjirbogʻ Mahallesi, Yakkasaroy İlçesi, Taşkent Şehri.",
+    "title2": "Telefon Numarası",
+    "text2": "+998 71 234 56 78",
+    "title3": "E-posta Adresi",
+    "text3": "W8I7I@example.com"
+  },
+  "applications": "Başvurular",
+  "contracts": "Sözleşmeler",
+  "laws": "Kanunlar",
+  "supreme_court_resolutions": "Yüksek Mahkeme Genel Kurulu Kararları",
+  "stats": {
+    "title1": "Güvenilir Müşteriler",
+    "title2": "Dava Kazandı",
+    "title3": "Avukatlar"
+  },
+  "article": {
+    "articles": "Makaleler",
+    "latest_update": "Son Makale Güncellemesi"
+  },
+
+  "topnavbarlink": {
+    "title1": "Ana Sayfa",
+    "title2": "Hakkımızda",
+    "title3": "İletişim",
+    "title4": "Yayınlarımız"
+  },
+
+  "bottomnavbar": {
+    "title1": "Haberler",
+    "title2": "Hukuk Kütüphanesi",
+    "title3": "Hizmetler",
+    "title4": "Belgeler Örnekleri"
+  },
+  "gallery": {
+    "assistMessage": "Size nasıl yardımcı olabiliriz?",
+    "legalAreas": "Hukuk Uygulama Alanları"
+  },
+  "silider": {
+    "text": "Elementum viverra tortor rhoncus nunc. Proin lacinia kesintisiz hareket eder. Sagittis dolor, hendrerit ile birleştirilmiş.",
+    "status": "MC CEO'su",
+    "text2": "Vestibulum quisque vel diam, cursus neque. Pellentesque at ornare magna, nec commodo arcu. Amet consequat eget posuere arcu mi turpis convallis id ut.",
+    "status2": "SoftTech'in CTO'su",
+    "text3": "Ultrices urna tellus vulputate scelerisque nulla. Quis est sit arcu maecenas, diam elementum convallis dictum euismod. Blandit congue nisl proin ac commodo.",
+    "status3": "CreArt'ta Lider Tasarımcı"
+  },
+  "experts": {
+    "qualified_attorneys": "Nitelikli Avukatlar",
+    "meet_our_experts": "Uzmanlarımızla Tanışın",
+    "name": "Cody Fisher",
+    "service": "Ceza Savunması",
+    "name1": "Jane Doe",
+    "service1": "Ceza Savunması",
+    "name2": "Джон Смит",
+    "service2": "Уголовная защита",
+    "name3": "Сара Джонсон",
+    "service3": "Уголовная защита"
+  },
+  "documents": {
+    "category_name1": "Diğer medeni uyuşmazlıklar için başvurular",
+    "category_name2": "Aile uyuşmazlıkları için başvurular",
+    "category_name3": "Konut uyuşmazlıkları için başvurular",
+    "category_name4": "İş uyuşmazlıkları için başvurular",
+    "shartnomalar1": "Gayrimenkul ile ilgili sözleşmeler",
+    "shartnomalar2": "Taşıtlara yönelik sözleşmeler",
+    "shartnomalar3": "Tüzel kişilere yönelik sözleşmeler",
+    "talabnoma": "Sözleşme ile ilgili talep"
   }
-  
+}

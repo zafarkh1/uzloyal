@@ -2,8 +2,10 @@ import { useParams } from "react-router-dom";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
 import useGetData from "../../api/api";
+import { useTranslation } from "react-i18next";
 
 const ServiceDetails = () => {
+  const { t } = useTranslation();
   const { id } = useParams();
   const { services } = useGetData();
 
@@ -31,7 +33,7 @@ const ServiceDetails = () => {
               <p className="mt-4">{service.text_en}</p>
             </div>
           ) : (
-            <p>Service not found.</p>
+            <p>{t("service_not_found.service_not_found")}</p>
           )}
         </div>
       </div>

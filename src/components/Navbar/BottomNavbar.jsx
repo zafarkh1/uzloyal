@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { MdClose, MdMenu } from "react-icons/md";
-
-const botNavs = [
-  { id: 5, title: "News", link: "/news" },
-  { id: 6, title: "Legal library", link: "/library" },
-  { id: 7, title: "Services", link: "/services" },
-  { id: 8, title: "Document samples", link: "/resources" },
-];
 
 function BottomNavbar({ navs }) {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+
+  const botNavs = [
+    { id: 5, title: t("bottomnavbar.title1"), link: "/news" },
+    { id: 6, title: t("bottomnavbar.title2"), link: "/library" },
+    { id: 7, title: t("bottomnavbar.title3"), link: "/services" },
+    { id: 8, title: t("bottomnavbar.title4"), link: "/resources" },
+  ];
 
   return (
     <div className="bg-primary text-white pl-0 relative">

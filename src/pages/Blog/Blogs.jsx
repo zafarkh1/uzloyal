@@ -3,10 +3,22 @@ import useGetData from "../../api/api";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import PostSidebar from "../../components/Sidebars/PostSidebar";
 import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
+import { useLangStore } from "../../components/utils/zustand/useLangStore";
 
 const Blogs = () => {
   const navigate = useNavigate();
   const { blogs } = useGetData();
+
+  // translate language
+  const { currentLanguage } = useLangStore();
+  const getBlogs = (item) => {
+    if (currentLanguage === "uz") return item?.title_uz;
+    if (currentLanguage === "ru") return item?.title_ru;
+    if (currentLanguage === "cn") return item?.title_zh;
+    if (currentLanguage === "tr") return item?.title_tr;
+    return item?.title_en;
+  };
+  //
 
   return (
     <div className="lg:mt-48 sm:mt-32 mt-24">
@@ -36,12 +48,12 @@ const Blogs = () => {
                 >
                   By
                   <span className="text-blue-500 hover:underline ml-1 cursor-pointer">
-                    {post.author}
+                    {getBlogs(post)}
                   </span>
                 </li>
-                <li className="ml-4">{post.created_at.slice(0, 10)}</li>
+                <li className="ml-4">{getBlogs(post).slice(0, 10)}</li>
               </ul>
-              <h3 className="heading5 lg:my-4 my-2">{post.title_en}</h3>
+              <h3 className="heading5 lg:my-4 my-2">{getBlogs(post)}</h3>
               <span
                 onClick={() => {
                   navigate(`/blogdetails/${post.id}`);

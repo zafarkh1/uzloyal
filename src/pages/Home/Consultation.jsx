@@ -6,8 +6,10 @@ import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { TfiAlarmClock } from "react-icons/tfi";
 // react icons
 import Button from "../../components/button/Button";
+import { useTranslation } from "react-i18next";
 
 const Consultation = () => {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -70,30 +72,29 @@ const Consultation = () => {
       <div className="grid grid-cols-2 justify-between">
         <div className="bg-[#1e2e3e] p-14 text-white">
           <h2 className="text-[40px] w-3/5 mb-5 leading-[55px] py-3 border-solid border-b-[2px] border-[#ad9071]">
-            Contact Info
+            {t("consultation.contactinfo")}
           </h2>
 
           <p className="text-[18px] leading-[28px] mb-[38px]">
-            You can find more information with these contact information
+            {t("consultation.more_info_contact")}
           </p>
 
           <div className="flex items-center gap-5 mb-[45px]">
             <GiHouse className="text-[60px]" />
             <div>
               <p className="text-[22px] leading-[30px] mb-[10px]">
-                Office Address
+                {t("consultation.office_address")}
               </p>
-              <p>
-                7th Street, Zanjirbogʻ neighborhood, Yakkasaroy district,
-                Tashkent city.
-              </p>
+              <p>{t("consultation.address")}</p>
             </div>
           </div>
 
           <div className="flex items-center gap-5 mb-[45px]">
             <LiaEnvelopeOpenTextSolid className="text-[60px]" />
             <div>
-              <p className="text-[22px] leading-[30px] mb-[10px]">Email</p>
+              <p className="text-[22px] leading-[30px] mb-[10px]">
+                {t("consultation.email")}
+              </p>
               <a href="mailto:loyalxat@gmail.com">loyalxat@gmail.com</a>
             </div>
           </div>
@@ -102,7 +103,7 @@ const Consultation = () => {
             <TfiHeadphoneAlt className="text-[60px]" />
             <div>
               <p className="text-[22px] leading-[30px] mb-[10px]">
-                Phone number
+                {t("consultation.phone_number")}
               </p>
               <a href="tel:+998901319544">+998901319544</a>
             </div>
@@ -112,27 +113,27 @@ const Consultation = () => {
             <TfiAlarmClock className="text-[60px]" />
             <div>
               <p className="text-[22px] leading-[30px] mb-[10px]">
-                Office Hours
+                {t("consultation.office_hours")}
               </p>
-              <p>Mon-Fri from 09:00 to 18:00 Tashkent</p>
+              <p>{t("consultation.office_hours_schedule")}</p>
             </div>
           </div>
         </div>
 
         <div className="bg-[#ad9071] p-14 text-white">
           <p className="text-[18px] leading-[28px] mt-3 text-center">
-            Contact Us
+            {t("consultation.contact_us")}
           </p>
 
           <h2 className="text-[40px] mb-5 leading-[55px] text-center border-solid border-b-[2px] border-[#ad9071]">
-            Consultation
+            {t("consultation.consultation")}
           </h2>
           <form onSubmit={sendConsultation} className="grid grid-cols-1 gap-5">
             <input
               onChange={(e) => setName(e.target.value)}
               value={name}
               type="text"
-              placeholder="Your Name"
+              placeholder={t("consultation.your_name")}
               className="px-4 py-[10px] placeholder-white outline-none border-[1px] border-white bg-transparent"
             />
             <span className="text-red-600" id="name"></span>
@@ -140,7 +141,7 @@ const Consultation = () => {
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               type="text"
-              placeholder="Your Email"
+              placeholder={t("consultation.your_email")}
               className="px-4 py-[10px] placeholder-white outline-none border-[1px] border-white bg-transparent"
             />
             <span className="text-red-600" id="email"></span>
@@ -148,14 +149,14 @@ const Consultation = () => {
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
               type="text"
-              placeholder="Your Phone"
+              placeholder={t("consultation.your_phone")}
               className="px-4 py-[10px] placeholder-white outline-none border-[1px] border-white bg-transparent"
             />
             <span className="text-red-600" id="phone"></span>
             <textarea
               onChange={(e) => setDescription(e.target.value)}
               value={description}
-              placeholder="Describe Your Case in Detail"
+              placeholder={t("consultation.describe_case")}
               rows={7}
               className="w-full resize-none px-4 py-[10px] placeholder-white outline-none border-[1px] border-white bg-transparent"
             ></textarea>

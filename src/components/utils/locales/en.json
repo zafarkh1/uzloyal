@@ -1,9 +1,138 @@
 {
-    "about": {
-      "heading": "About Us",
-      "subheading": "Why Choose Us?",
-      "title": "We are the best legal firm that can provide you with comprehensive assistance!",
-      "description": "Law Firm 'LOYAL' provides professional legal services to businesses (private entrepreneurs, companies and firms, LLCs, PJSCs, organizations of all forms of ownership) throughout the Republic of Uzbekistan. By contacting the LOYAL law office, you can count on qualified prompt assistance in protecting your rights and complete confidentiality of the information provided. You can always be sure that your case is being handled by a professional who specializes in providing legal services to businesses, has sufficient knowledge and experience in this area, is equally well versed in economics and law, and knows all the intricacies of organizing and running a business."
-    }
+  "error": "An error occurred, please try again!",
+  "success": "Successfully sent!...",
+  "translation": {
+    "name": "Enter your name, respectfully, admin",
+    "email": "Enter your email, respectfully, admin",
+    "phone": "Enter your phone number, respectfully, admin",
+    "info": "If you have any brief information about yourself, please write, respectfully, admin"
+  },
+  "about": {
+    "title1": "About Us",
+    "title2": "Why Choose Us",
+    "title3": "Home",
+    "title4": "How Can We Assist You?",
+    "title5": "Legal Practice Areas",
+    "heading": "About Us",
+    "subheading": "Why Choose Us?",
+    "title": "We are the best legal firm that can provide you with comprehensive assistance!",
+    "description": "Law Firm 'LOYAL' provides professional legal services to businesses (private entrepreneurs, companies and firms, LLCs, PJSCs, organizations of all forms of ownership) throughout the Republic of Uzbekistan. By contacting the LOYAL law office, you can count on qualified prompt assistance in protecting your rights and complete confidentiality of the information provided. You can always be sure that your case is being handled by a professional who specializes in providing legal services to businesses, has sufficient knowledge and experience in this area, is equally well versed in economics and law, and knows all the intricacies of organizing and running a business."
+  },
+  "button": {
+    "submitNow": "Submit Now"
+  },
+  "category": {
+    "civilDisputesApplications": "Applications for Other Civil Disputes"
+  },
+  "footer": {
+    "description": "We are the best legal firm that can provide you with comprehensive assistance!"
+  },
+  "topnavbar": {
+    "hours": "Mon-Fri from 09:00 to 18:00 Tashkent",
+    "consultation": "Get consultation"
+  },
+  "services": { "services": "Services" },
+  "blogdetails": {
+    "previous": "Previous",
+    "next": "Next",
+    "notfound": "Post Not Found",
+    "notfound_message": "The post you're looking for does not exist."
+  },
+  "blogs": {
+    "readmore": "Read more ..."
+  },
+  "consultation": {
+    "contactinfo": "Contact Info",
+    "more_info_contact": "You can find more information with these contact information.",
+    "office_address": "Office Address",
+    "address": "7th Street, Zanjirbogʻ neighborhood, Yakkasaroy district, Tashkent city.",
+    "email": "Email",
+    "phone_number": "Phone number",
+    "office_hours": "Office Hours",
+    "office_hours_schedule": "Mon-Fri from 09:00 to 18:00, Tashkent",
+    "contact_us": "Contact Us",
+    "consultation": "Consultation",
+    "your_name": "Your Name",
+    "your_email": "Your Email",
+    "your_phone": "Your Phone",
+    "describe_case": "Describe Your Case in Detail"
+  },
+  "latestNews": {
+    "news": "News",
+    "latest_news": "Latest News Update",
+    "read_more": "Read More"
+  },
+  "news": { "by": "By", "read_more": "Read More..." },
+  "service_not_found": { "service_not_found": "Service not found." },
+  "contact": {
+    "have_any_question": "Have Any Question?",
+    "contact_us_we_will_help": "Contact us, we will help you!",
+    "title1": "Office Address",
+    "text1": "7th Street, Zanjirbogʻ neighborhood, Yakkasaroy district, Tashkent city.",
+    "title2": "Phone Number",
+    "text2": "+998 71 234 56 78",
+    "title3": "Email Address",
+    "text3": "W8I7I@example.com"
+  },
+  "applications": "Applications",
+  "contracts": "Contracts",
+  "laws": "Laws",
+  "supreme_court_resolutions": "Supreme Court Plenary Decisions",
+  "stats": {
+    "title1": "Trusted Clients",
+    "title2": "Case Won",
+    "title3": "Lawyers"
+  },
+  "article": {
+    "articles": "Articles",
+    "latest_update": "Latest Article Update"
+  },
+
+  "topnavbarlink": {
+    "title1": "Home",
+    "title2": "About Us",
+    "title3": "Contact",
+    "title4": "Our Publications"
+  },
+
+  "bottomnavbar": {
+    "title1": "News",
+    "title2": "Legal Library",
+    "title3": "Services",
+    "title4": "Document Samples"
+  },
+  "gallery": {
+    "assistMessage": "How Can We Assist You?",
+    "legalAreas": "Legal Practice Areas"
+  },
+  "silider": {
+    "text": "Elementum viverra tortor rhoncus nunc. Proin lacinia moves seamlessly. Sagittis dolor hendrerit donec in eu, facilisis lobortis.",
+    "status": "CEO of MC",
+    "text2": "Vestibulum quisque vel diam, cursus neque. Pellentesque at ornare magna, nec commodo arcu. Amet consequat eget posuere arcu mi turpis convallis id ut.",
+    "status2": "CTO of SoftTech",
+    "text3": "Ultrices urna tellus vulputate scelerisque nulla. Quis est sit arcu maecenas, diam elementum convallis dictum euismod. Blandit congue nisl proin ac commodo.",
+    "status3": "Lead Designer at CreArt"
+  },
+  "experts": {
+    "qualified_attorneys": "Qualified Attorneys",
+    "meet_our_experts": "Meet Our Experts",
+    "name": "Cody Fisher",
+    "service": "Criminal Defense",
+    "name1": "Jane Doe",
+    "service1": "Criminal Defense",
+    "name2": "John Smith",
+    "service2": "Criminal Defense",
+    "name3": "Sarah Johnson",
+    "service3": "Criminal Defense"
+  },
+  "documents": {
+    "category_name1": "Applications for Other Civil Disputes",
+    "category_name2": "Applications for Family Disputes",
+    "category_name3": "Applications for Housing Disputes",
+    "category_name4": "Applications for Labor Disputes",
+    "shartnomalar1": "Contracts Related to Real Estate",
+    "shartnomalar2": "Contracts for Vehicles",
+    "shartnomalar3": "Contracts for Legal Entities",
+    "talabnoma": "Request Regarding the Contract"
   }
-  
+}
