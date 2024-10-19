@@ -32,7 +32,7 @@ const languages = [
 
 function TopNavbar({ navs }) {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const { setCurrentLanguage } = useLangStore();
 
   const handleLanguageChange = (lang) => {
