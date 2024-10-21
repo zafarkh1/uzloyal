@@ -8,7 +8,7 @@ const icons = [
   {
     id: 1,
     icon: <FaTelegram className="text-xl" />,
-    link: "https://telegram.org/",
+    link: "https://t.me/akobirr777",
   },
   {
     id: 2,
