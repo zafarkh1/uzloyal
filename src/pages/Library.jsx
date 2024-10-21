@@ -16,6 +16,7 @@ function Library() {
     if (currentLanguage === "tr") return item?.title_tr;
     return item?.title_en;
   };
+  getLibrary();
 
   return (
     <div className="lg:mt-48 sm:mt-32 mt-24">

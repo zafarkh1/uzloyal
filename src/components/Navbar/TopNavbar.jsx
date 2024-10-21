@@ -31,6 +31,7 @@ const languages = [
 ];
 
 function TopNavbar({ navs }) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const { setCurrentLanguage } = useLangStore();
