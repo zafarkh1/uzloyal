@@ -18,7 +18,7 @@ const icons = [
   {
     id: 3,
     icon: <FaInstagram className="text-xl" />,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/_akob1r_/",
   },
 ];
 
