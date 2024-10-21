@@ -10,7 +10,7 @@ const AttorneyDetails = () => {
       <div className="container">
         <div className="attorney-single-wrap">
           <div className="attorney-info-wrap">
-            <div className="flex flex-col lg:flex-row items-start space-x-0 lg:space-x-8">
+            <div className="flex flex-col lg:flex-row items-start space-x-0 lg:space-x-4">
               {/* Attorney image section */}
               <div className="w-full lg:w-5/12">
                 <div className="attorney-info-img">
@@ -150,7 +150,7 @@ const AttorneyDetails = () => {
                   </div>
 
                   {/* Achievements Section */}
-                  <div className="w-full lg:w-1/2 p-4">
+                  <div className="w-full lg:w-1/2 p-4 mb-0">
                     <div className="education-area ex-widget h-full flex flex-col">
                       <h2 className="text-xl font-bold">Achievements</h2>
                       <ul className="mt-6 list-inside achievement-list flex-grow">
@@ -161,15 +161,17 @@ const AttorneyDetails = () => {
                         <li className="mb-6">Young Star Award at criminal law in 2021</li>
                         <li>Greatest Lawyer Top 10</li>
                       </ul>
+                        
                     </div>
                   </div>
-                {/* SendMessages Component */}
-            <div className="send-message-wrap"> {/* Set margin to 12 to maintain 50px spacing */}
-              <Appointment />
-            </div>
+             
                 </div>
               </div>
-                
+            
+                 {/* SendMessages Component */}
+            <div className="send-message-wrap"> 
+              <Appointment />
+            </div>
             </div>
           </div>
         </div>

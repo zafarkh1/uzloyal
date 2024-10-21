@@ -56,7 +56,7 @@ const SendMessages = () => {
   };
 
   return (
-    <div className="wpo-contact-area ex-widget mb-10 section-padding mt-64">
+    <div className="wpo-contact-area ex-widget mb-10 section-padding">
       <div className="container">
         <div className="wpo-contact-title mb-6">
           <h2 className="text-2xl font-bold">{t('Make an Appointment')}</h2>
