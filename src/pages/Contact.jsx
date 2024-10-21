@@ -1,4 +1,4 @@
-import { Children, useState } from "react";
+import { useState } from "react";
 import { MdLocationOn } from "react-icons/md";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { BiSolidMessageCheck } from "react-icons/bi";
@@ -42,8 +42,8 @@ function Contact() {
   const handleChange = (e) => {
     e.preventDefault();
 
-    const sendtoken = "7047437133:AAF1g7efX79bh4TSYtBwN1TEQRL6GtjFczo";
-    const chat_id = 6399996460;
+    const sendtoken = "5810941788:AAG4BVSolz6g2-CaXDKvtnvHEyBUohp196g";
+    const chat_id = -1001821411125;
     const url = `https://api.telegram.org/bot${sendtoken}/sendMessage`;
 
     const messageContent = `Your name : ${name} \nYour email : ${email} \nYour phone : ${phone} \nYour description : ${description}`;

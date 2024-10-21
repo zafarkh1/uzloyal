@@ -55,7 +55,11 @@
     "your_name": "Your Name",
     "your_email": "Your Email",
     "your_phone": "Your Phone",
-    "describe_case": "Describe Your Case in Detail"
+    "describe_case": "Describe Your Case in Detail",
+    "name_required": "Your name is required.",
+    "email_required": "Your email is required.",
+    "phone_required": "Your phone number is required.",
+    "description_required": "A description is required."
   },
   "latestNews": {
     "news": "News",

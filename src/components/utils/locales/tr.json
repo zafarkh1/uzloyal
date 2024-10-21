@@ -55,7 +55,11 @@
     "your_name": "Adınız",
     "your_email": "E-posta adresiniz",
     "your_phone": "Telefon numaranız",
-    "describe_case": "Lütfen davanızı ayrıntılı olarak tanımlayın"
+    "describe_case": "Lütfen davanızı ayrıntılı olarak tanımlayın",
+    "name_required": "Adınız gereklidir.",
+    "email_required": "E-posta adresiniz gereklidir.",
+    "phone_required": "Telefon numaranız gereklidir.",
+    "description_required": "Açıklama gereklidir."
   },
   "latestNews": {
     "news": "Haberler",

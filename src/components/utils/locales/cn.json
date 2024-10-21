@@ -55,7 +55,11 @@
     "your_name": "您的名字",
     "your_email": "您的电子邮件",
     "your_phone": "您的电话",
-    "describe_case": "详细描述您的案例"
+    "describe_case": "详细描述您的案例",
+    "name_required": "您的名字是必填项。",
+    "email_required": "您的电子邮件是必填项。",
+    "phone_required": "您的电话号码是必填项。",
+    "description_required": "描述是必填项。"
   },
   "latestNews": {
     "news": "新闻",

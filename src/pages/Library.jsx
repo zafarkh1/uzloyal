@@ -2,20 +2,10 @@ import { GoArrowRight } from "react-icons/go";
 import useGetData from "../api/api";
 import { BackgroundofPages } from "../components/utils/backgoundOfPages";
 import { useTranslation } from "react-i18next";
-import { useLangStore } from "../components/utils/zustand/useLangStore";
 
 function Library() {
   const { sources } = useGetData();
   const { t } = useTranslation();
-
-  const { currentLanguage } = useLangStore();
-  const getLibrary = (item) => {
-    if (currentLanguage === "uz") return item?.title_uz;
-    if (currentLanguage === "ru") return item?.title_ru;
-    if (currentLanguage === "cn") return item?.title_zh;
-    if (currentLanguage === "tr") return item?.title_tr;
-    return item?.title_en;
-  };
 
   return (
     <div className="lg:mt-48 sm:mt-32 mt-24">

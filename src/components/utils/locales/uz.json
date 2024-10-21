@@ -55,7 +55,11 @@
     "your_name": "Ismingiz",
     "your_email": "Elektron pochta manzilingiz",
     "your_phone": "Telefon raqamingiz",
-    "describe_case": "Iltimos, ishni batafsil tushuntiring"
+    "describe_case": "Iltimos, ishni batafsil tushuntiring",
+    "name_required": "Ismingizni kiritish majburiy.",
+    "email_required": "Emailingizni kiritish majburiy.",
+    "phone_required": "Telefon raqamingizni kiritish majburiy.",
+    "description_required": "Tavsif kiritilishi shart."
   },
   "latestNews": {
     "news": "Yangiliklar",

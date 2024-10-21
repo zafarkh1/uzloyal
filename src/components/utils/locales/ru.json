@@ -55,7 +55,11 @@
     "your_name": "Ваше имя",
     "your_email": "Ваш адрес электронной почты",
     "your_phone": "Ваш номер телефона",
-    "describe_case": "Подробно опишите ваш случай"
+    "describe_case": "Подробно опишите ваш случай",
+    "name_required": "Ваше имя обязательно.",
+    "email_required": "Ваш email обязателен.",
+    "phone_required": "Ваш номер телефона обязателен.",
+    "description_required": "Описание обязательно."
   },
   "latestNews": {
     "news": "Новости",

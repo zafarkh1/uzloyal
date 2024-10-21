@@ -3,7 +3,6 @@ import PostSidebar from "../../components/Sidebars/PostSidebar";
 import ServiceSidebar from "../../components/Sidebars/ServiceSidebar";
 import useGetData from "../../api/api";
 import { BackgroundofPages } from "../../components/utils/backgoundOfPages";
-import { useLangStore } from "../../components/utils/zustand/useLangStore";
 import { useTranslation } from "react-i18next";
 
 const BlogDetails = () => {
@@ -11,17 +10,6 @@ const BlogDetails = () => {
   const navigate = useNavigate();
   const { blogs } = useGetData();
   const { t } = useTranslation();
-
-  // translate language
-  const { currentLanguage } = useLangStore();
-  const getBlogDetailsLanguage = (item) => {
-    if (currentLanguage === "uz") return item?.title_uz;
-    if (currentLanguage === "ru") return item?.title_ru;
-    if (currentLanguage === "cn") return item?.title_zh;
-    if (currentLanguage === "tr") return item?.title_tr;
-    return item?.title_en;
-  };
-  //
 
   const currentPostIndex = blogs.findIndex((post) => post.id === id);
   const currentPost = blogs[currentPostIndex];

@@ -34,3 +34,17 @@
 .flexCenter {
   @apply flex items-center justify-center;
 }
+/* Custom CSS for achievements icon */
+.achievement-list li {
+  position: relative; /* Position relative for the icon */
+  padding-left: 24px; /* Adjust padding to make space for the icon */
+}
+
+.achievement-list li::before {
+  content: ""; /* Your icon here */
+  font-family: 'themify'; /* Ensure you have the themify icon font loaded */
+  position: absolute;
+  left: 0; /* Position the icon to the left */
+  top: 5px; /* Adjust as needed */
+  font-size: 14px; /* Size of the icon */
+}
