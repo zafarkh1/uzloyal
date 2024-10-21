@@ -15,6 +15,7 @@ const icons = [
     icon: <FaFacebook className="text-xl" />,
     link: "https://www.facebook.com/",
   },
+  //
   {
     id: 3,
     icon: <FaInstagram className="text-xl" />,
