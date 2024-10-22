@@ -78,7 +78,7 @@ function Footer(props) {
           </div>
 
           {/*    Quick links */}
-          <div className="sm:col-span-2">
+          <div className="lg:col-span-1 sm:col-span-2">
             <h5 className="heading5">Quick Links</h5>
             <ul className="space-y-2 lg:mt-6 mt-3">
               {navs.map((item) => (
@@ -90,7 +90,7 @@ function Footer(props) {
           </div>
 
           {/*    Services */}
-          <div className="sm:col-span-1">
+          <div className="lg:col-span-1 sm:col-span-1">
             <h5 className="heading5">Services</h5>
             <ul className="space-y-2 lg:mt-6 mt-3">
               {getCaseStudies.map((study, index) => (
