@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaTelegram, FaFacebook, FaInstagram } from "react-icons/fa";
+import { getCaseStudies } from "../../api/caseStudies";
 
 const icons = [
   {
@@ -19,72 +20,6 @@ const icons = [
   },
 ];
 
-const navs = [
-  {
-    id: 1,
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "About us",
-    link: "/about",
-  },
-  {
-    id: 3,
-    title: "Services",
-    link: "/services",
-  },
-  {
-    id: 4,
-    title: "Our publictioons",
-    link: "/blog",
-  },
-  {
-    id: 5,
-    title: "News",
-    link: "/news",
-  },
-  {
-    id: 6,
-    title: "Contact",
-    link: "/contact",
-  },
-  {
-    id: 7,
-    title: "Document samples",
-    link: "/resources",
-  },
-];
-
-const services = [
-  {
-    id: 1,
-    title: "q",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "w",
-    link: "/about",
-  },
-  {
-    id: 3,
-    title: "e",
-    link: "/services",
-  },
-  {
-    id: 4,
-    title: "r",
-    link: "/blog",
-  },
-  {
-    id: 5,
-    title: "t",
-    link: "/news",
-  },
-];
-
 const privacy = [
   {
     id: 1,
@@ -94,29 +29,41 @@ const privacy = [
   {
     id: 2,
     title: "About us",
-    link: "/about",
+    link: "/",
   },
   {
     id: 3,
     title: "Terms",
-    link: "/services",
+    link: "/",
   },
   {
     id: 4,
     title: "FAQ",
-    link: "/news",
+    link: "/",
   },
 ];
 
 function Footer(props) {
   const { t } = useTranslation();
+
+  const navs = [
+    { id: 1, title: t("topnavbarlink.title1"), link: "/" },
+    { id: 2, title: t("topnavbarlink.title2"), link: "/about" },
+    { id: 3, title: t("topnavbarlink.title3"), link: "/contact" },
+    { id: 4, title: t("topnavbarlink.title4"), link: "/blogs" },
+    { id: 5, title: t("bottomnavbar.title1"), link: "/news" },
+    { id: 6, title: t("bottomnavbar.title3"), link: "/services" },
+    { id: 7, title: t("bottomnavbar.title4"), link: "/resources" },
+  ];
+
   return (
-    <div className="bg-primary pt-16">
+    <div className="bg-primary lg:pt-16 sm:pt-12 pt-8">
       <div className="myContainer text-white">
-        <div className="flex md:flex-row flex-col justify-between border-b border-fontColor pb-10">
-          <div className="flex flex-col gap-6">
+        <div className="grid sm:grid-cols-3 grid-cols-1 lg:gap-10 gap-4 justify-center border-b border-fontColor lg:pb-10 pb-4">
+          {/*    About us */}
+          <div className="flex flex-col lg:gap-6 gap-3 lg:col-span-1 sm:col-span-3">
             <h2 className="heading2">UzLoyal</h2>
-            <p className="w-60">{t("footer.description")}</p>
+            <p className="lg:w-60">{t("footer.description")}</p>
             <div className="flex gap-4">
               {icons.map((item) => (
                 <a
@@ -129,9 +76,11 @@ function Footer(props) {
               ))}
             </div>
           </div>
-          <div>
+
+          {/*    Quick links */}
+          <div className="sm:col-span-2">
             <h5 className="heading5">Quick Links</h5>
-            <ul className="space-y-2 mt-6">
+            <ul className="space-y-2 lg:mt-6 mt-3">
               {navs.map((item) => (
                 <li key={item.id}>
                   <a href={item.link}>{item.title}</a>
@@ -139,23 +88,31 @@ function Footer(props) {
               ))}
             </ul>
           </div>
-          <div>
+
+          {/*    Services */}
+          <div className="sm:col-span-1">
             <h5 className="heading5">Services</h5>
-            <ul className="space-y-2 mt-6">
-              {services.map((item) => (
-                <li key={item.id}>
-                  <a href={item.link}>{item.title}</a>
+            <ul className="space-y-2 lg:mt-6 mt-3">
+              {getCaseStudies.map((study, index) => (
+                <li key={study.id}>
+                  <a href={`/case-studies/${study.id}`}>{study.title}</a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="flex justify-between items-center mt-6">
-          <p>Copyright © 2023 Loyal.uz. All rights reserved.</p>
+
+        {/*    Copyright */}
+        <div className="flex md:flex-row flex-col justify-between items-center lg:mt-6 mt-3">
+          <p className="text">
+            Copyright © 2023 Loyal.uz. All rights reserved.
+          </p>
           <ul className="flex gap-4">
             {privacy.map((item) => (
               <li key={item.id}>
-                <a href={item.link}>{item.title}</a>
+                <a href={item.link} className="text">
+                  {item.title}
+                </a>
               </li>
             ))}
           </ul>
