@@ -45,7 +45,7 @@ const NewsDetails = () => {
   };
 
   return (
-    <div className="mt-52">
+    <div className="lg:mt-48 sm:mt-32 mt-24 lg:mb-0 mb-10">
       {/* Background image */}
       <BackgroundofPages heading="News" text="Latest news" />
 
@@ -55,29 +55,27 @@ const NewsDetails = () => {
           {currentPost ? (
             <div>
               <div>
-                <ul className="flex items-center justify-start text-gray-600">
+                <ul className="flex items-center justify-start text-gray-600 text">
                   <li className="flex items-center">
                     <span>{t("news.by")}</span>
                     <Link
                       to={`/newsdetails/${currentPost.id}`}
                       className="ml-1 hover:text-[#c3af41]"
                     >
-                      {getNewsDetailsLanguage(currentPost)}
+                      {currentPost.author}
                     </Link>
                   </li>
-                  <li className="flex items-center ml-10">
-                    <span>
-                      {getNewsDetailsLanguage(currentPost).slice(0, 10)}
-                    </span>
+                  <li className="flex items-center lg:ml-10 ml-2">
+                    <span>{currentPost.created_at.slice(0, 10)}</span>
                   </li>
                 </ul>
               </div>
 
-              <h2 className="mt-4 mb-6 heading2">
+              <h2 className="lg:my-4 my-2 heading2">
                 {getNewsDetailsLanguage(currentPost)}
               </h2>
 
-              <div className="my-10">
+              <div className="lg:my-10 my-4">
                 <img
                   src={`https://test.uzloyal.uz/api/uploads/images/${currentPost.news_images[0]["image.src"]}`}
                   alt={currentPost.title_en}
@@ -86,7 +84,7 @@ const NewsDetails = () => {
               </div>
 
               {/* Previous and Next Post Navigation */}
-              <div className="more-posts flex justify-between w-full mt-10 mb-10">
+              <div className="more-posts flex justify-between w-full mt-10 mb-10 text">
                 {prevPost && (
                   <div className="previous-post border border-gray-300 p-4 flex flex-col">
                     <button

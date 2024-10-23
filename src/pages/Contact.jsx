@@ -114,7 +114,7 @@ function Contact() {
 
           <form
             onSubmit={handleChange}
-            className="p-10 shadow-[0_5px_15px_0_#3e419f1a] bg-white relative"
+            className="lg:p-10 p-4 shadow-[0_5px_15px_0_#3e419f1a] bg-white relative"
           >
             <div className="grid md:grid-cols-2 md:gap-x-5 md:gap-y-8 gap-5">
               <div>

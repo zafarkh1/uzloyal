@@ -59,12 +59,12 @@ function Footer(props) {
   return (
     <div className="bg-primary lg:pt-16 sm:pt-12 pt-8">
       <div className="myContainer text-white">
-        <div className="grid sm:grid-cols-3 grid-cols-1 lg:gap-10 gap-4 justify-center border-b border-fontColor lg:pb-10 pb-4">
+        <div className="grid sm:grid-cols-3 grid-cols-2 lg:gap-10 gap-4 justify-center border-b border-fontColor lg:pb-10 pb-4">
           {/*    About us */}
-          <div className="flex flex-col lg:gap-6 gap-3 lg:col-span-1 sm:col-span-3">
+          <div className="flex flex-col lg:gap-6 gap-3 lg:col-span-1 col-span-3 sm:text-left text-center">
             <h2 className="heading2">UzLoyal</h2>
             <p className="lg:w-60">{t("footer.description")}</p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 sm:justify-start justify-center">
               {icons.map((item) => (
                 <a
                   key={item.id}
@@ -78,7 +78,7 @@ function Footer(props) {
           </div>
 
           {/*    Quick links */}
-          <div className="lg:col-span-1 sm:col-span-2">
+          <div className="lg:col-span-1 col-span-1">
             <h5 className="heading5">Quick Links</h5>
             <ul className="space-y-2 lg:mt-6 mt-3">
               {navs.map((item) => (
@@ -90,7 +90,7 @@ function Footer(props) {
           </div>
 
           {/*    Services */}
-          <div className="lg:col-span-1 sm:col-span-1">
+          <div className="lg:col-span-1 col-span-1">
             <h5 className="heading5">Services</h5>
             <ul className="space-y-2 lg:mt-6 mt-3">
               {getCaseStudies.map((study, index) => (

@@ -10,6 +10,7 @@ function Library() {
   return (
     <div className="lg:mt-48 sm:mt-32 mt-24">
       <BackgroundofPages heading={"Legal Library"} text={"Library"} />
+
       <div className="bg-[#cccaca5d]">
         <div className="myContainer">
           <div className="grid lg:grid-cols-2 lg:py-10 py-6 gap-10">
@@ -27,7 +28,10 @@ function Library() {
                   {t("laws")}
                 </h1>
                 {sources?.slice(0, 3).map((value, index) => (
-                  <div key={index} className="flex gap-2 items-center">
+                  <div
+                    key={index}
+                    className="flex gap-2 items-center lg:mb-5 mb-3"
+                  >
                     <GoArrowRight className="text" />
                     <a
                       download
@@ -55,7 +59,10 @@ function Library() {
                   {t("supreme_court_resolutions")}
                 </h1>
                 {sources?.slice(3, 22).map((value, index) => (
-                  <div key={index} className="flex gap-2 items-center">
+                  <div
+                    key={index}
+                    className="flex gap-2 items-center lg:mb-5 mb-3"
+                  >
                     <GoArrowRight className="text-[20px]" />
                     <a
                       download

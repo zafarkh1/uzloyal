@@ -76,7 +76,7 @@ const Consultation = () => {
   };
 
   return (
-    <div className="grid lg:grid-cols-2 justify-between lg:mt-20 mt-10 w-full">
+    <div className="grid lg:grid-cols-2 justify-between lg:mt-20 my-10 w-full">
       {/* Contact Information Section */}
       <div className="bg-[#1e2e3e] lg:px-10 px-5 lg:py-12 py-6 text-white">
         <h2 className="mb-5 heading2 py-3 border-b-[2px] border-[#ad9071]">

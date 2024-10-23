@@ -33,7 +33,7 @@ const BlogDetails = () => {
   };
 
   return (
-    <div className="mt-52">
+    <div className="lg:mt-48 sm:mt-32 mt-24 lg:mb-0 mb-10">
       {/*     Background image    */}
       <BackgroundofPages heading="Latest" Articles text="Our publications" />
 
@@ -43,7 +43,7 @@ const BlogDetails = () => {
           {currentPost ? (
             <div>
               <div>
-                <ul className="flex items-center justify-start text-gray-600">
+                <ul className="flex items-center justify-start text-gray-600 text">
                   <li className="flex items-center">
                     <span>By </span>
                     <Link
@@ -53,15 +53,17 @@ const BlogDetails = () => {
                       {currentPost.author}
                     </Link>
                   </li>
-                  <li className="flex items-center ml-10">
+                  <li className="flex items-center lg:ml-10 ml-4">
                     <span>{currentPost.created_at.slice(0, 10)}</span>
                   </li>
                 </ul>
               </div>
 
-              <h2 className="mt-4 mb-6 heading2">{currentPost.title_en}</h2>
+              <h2 className="lg:mt-4 mt-2 lg:mb-6 mb-3 heading2">
+                {currentPost.title_en}
+              </h2>
 
-              <div className="my-10">
+              <div className="lg:my-10 my-2">
                 <img
                   src={`https://test.uzloyal.uz/api/uploads/images/${currentPost.blog_images[0]["image.src"]}`}
                   alt={currentPost.title_en}
@@ -70,7 +72,7 @@ const BlogDetails = () => {
               </div>
 
               {/* Previous and Next Post Navigation */}
-              <div className="more-posts flex justify-between w-full mt-10 mb-10">
+              <div className="more-posts flex justify-between w-full my-10">
                 {prevPost && (
                   <div className="previous-post border border-gray-300 p-4 flex flex-col">
                     <button

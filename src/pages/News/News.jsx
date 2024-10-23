@@ -43,13 +43,13 @@ const News = () => {
                 <li>
                   {t("news.by")}
                   <span
-                    className="text-secondary cursor-pointer"
+                    className="text-secondary cursor-pointer ml-2"
                     onClick={() => {
                       navigate(`/newsdetails/${post.id}`);
                       window.scrollTo(0, 0);
                     }}
                   >
-                    {getAuthorName(post)}
+                    {post.author}
                   </span>
                 </li>
                 <li>{post.created_at.slice(0, 10)}</li>
